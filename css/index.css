@@ -100,11 +100,16 @@ section.success {
     .scroll-top .btn:focus {
       outline: none; }
 
+.navlink-border{
+  height: 1px;
+}
+
+
 #mainNav {
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   text-transform: uppercase;
   border: none;
   background: #2C3E50; }
@@ -118,9 +123,12 @@ section.success {
   #mainNav .navbar-nav {
     letter-spacing: 1px; }
     #mainNav .navbar-nav li.nav-item a.nav-link {
-      color: white; }
-      #mainNav .navbar-nav li.nav-item a.nav-link:hover {
+      color: white; 
+      border-bottom: 2px solid #2C3E50;
+    }
+      #mainNav .navbar-nav li.nav-item a.nav-link:hover{
         color: #18BC9C;
+        border-bottom-color: white;
         outline: none; }
       #mainNav .navbar-nav li.nav-item a.nav-link:active, #mainNav .navbar-nav li.nav-item a.nav-link:focus {
         color: white; }
@@ -133,19 +141,22 @@ section.success {
     #mainNav .navbar-toggler:focus, #mainNav .navbar-toggler:hover {
       color: white;
       border-color: #18BC9C;
-      background-color: #18BC9C; }
+      background-color: #18BC9B; }
 
 @media (min-width: 992px) {
   .top-bar {
     background-color: white;
     height: 40px;
   }
+  .nav-item {
+    padding-right: 15px;
+  }
   #mainNav {
     -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
     -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
     transition: padding-top 0.3s, padding-bottom 0.3s; }
     #mainNav .navbar-brand {
-      font-size: 2em;
+      font-size: 1.3em;
       -webkit-transition: all 0.3s;
       -moz-transition: all 0.3s;
       transition: all 0.3s; }

@@ -25,6 +25,8 @@
     target: '#mainNav',
     offset: 54
   });
+
+ 
 /*
   // Collapse the navbar when page is scrolled
   $(window).scroll(function() {
