@@ -124,11 +124,9 @@ section.success {
     letter-spacing: 1px; }
     #mainNav .navbar-nav li.nav-item a.nav-link {
       color: white; 
-      border-bottom: 2px solid #2C3E50;
     }
       #mainNav .navbar-nav li.nav-item a.nav-link:hover{
         color: #18BC9C;
-        border-bottom-color: white;
         outline: none; }
       #mainNav .navbar-nav li.nav-item a.nav-link:active, #mainNav .navbar-nav li.nav-item a.nav-link:focus {
         color: white; }
@@ -160,10 +158,20 @@ section.success {
       -webkit-transition: all 0.3s;
       -moz-transition: all 0.3s;
       transition: all 0.3s; }
+  #mainNav .navbar-nav li.nav-item a.nav-link {
+      color: white; 
+      border-bottom: 2px solid #2C3E50;
+    }
+    #mainNav .navbar-nav li.nav-item a.nav-link:hover{
+      border-bottom-color: white;
+    }
     #mainNav .navbar-nav > li.nav-item > a.nav-link.active {
       color: white;
       border-radius: 3px;
       background: #18BC9C; }
+      #mainNav .navbar-nav li.nav-item a.nav-link {
+        border-bottom: 2px solid #2C3E50;
+      }
       #mainNav .navbar-nav > li.nav-item > a.nav-link.active:active, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:focus, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {
         color: white;
         background: #18BC9C; }
