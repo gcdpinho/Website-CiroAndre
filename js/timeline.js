@@ -25,16 +25,6 @@ jQuery(document).ready(function($){
 			//the timeline has been initialize - show it
 			timeline.addClass('loaded');
 
-			//detect click on the next arrow
-			timelineComponents['timelineNavigation'].on('click', '.next', function(event){
-				event.preventDefault();
-				updateSlide(timelineComponents, timelineTotWidth, 'next');
-			});
-			//detect click on the prev arrow
-			timelineComponents['timelineNavigation'].on('click', '.prev', function(event){
-				event.preventDefault();
-				updateSlide(timelineComponents, timelineTotWidth, 'prev');
-			});
 			//detect click on the a single event - show new event content
 			timelineComponents['eventsWrapper'].on('click', 'a', function(event){
 				event.preventDefault();
@@ -43,6 +33,30 @@ jQuery(document).ready(function($){
 				updateOlderEvents($(this));
 				updateFilling($(this), timelineComponents['fillingLine'], timelineTotWidth);
 				updateVisibleContent($(this), timelineComponents['eventsContent']);
+			});
+			//detect click on the next arrow
+			timelineComponents['timelineNavigation'].on('click', '.next', function(event){
+				var index = Number($('a.selected').attr('value'));
+				$('a[value='+(index+1)+']').click();
+				event.preventDefault();
+				var aux = $('ol#timeline').children('li').length/2;
+				if ($(window).width() < 992)
+					aux = 0
+				if(index+1 > aux)
+					updateSlide(timelineComponents, timelineTotWidth, 'next');
+				updateArrow();
+			});			
+			//detect click on the prev arrow
+			timelineComponents['timelineNavigation'].on('click', '.prev', function(event){
+				var index = Number($('a.selected').attr('value'));
+				$('a[value='+(index-1)+']').click();
+				event.preventDefault();
+				var aux = $('ol#timeline').children('li').length/2;
+				if ($(window).width() < 992)
+					aux = $('ol#timeline').children('li').length
+				if(index-1 < aux)
+					updateSlide(timelineComponents, timelineTotWidth, 'prev');
+				updateArrow();
 			});
 
 			//on swipe, show next/prev event content
@@ -65,11 +79,26 @@ jQuery(document).ready(function($){
 			});
 		});
 	}
-
+	
+	function updateArrow(){
+		if ($('a.selected').attr('value') == "0")  
+			$('a.prev').addClass('inactive')
+		else
+			$('a.prev').removeClass('inactive');
+		if (Number($('a.selected').attr('value')) == $('ol#timeline').children('li').length-1)  
+			$('a.next').addClass('inactive')
+		else
+			$('a.next').removeClass('inactive');
+	}
 	function updateSlide(timelineComponents, timelineTotWidth, string) {
 		//retrieve translateX value of timelineComponents['eventsWrapper']
-		var translateValue = getTranslateValue(timelineComponents['eventsWrapper']),
-			wrapperWidth = Number(timelineComponents['timelineWrapper'].css('width').replace('px', ''));
+		var aux;
+		if ($(window).width() >= 992)
+			aux = Number(timelineComponents['timelineWrapper'].css('width').replace('px', ''));
+		else
+			aux = Number(timelineComponents['timelineWrapper'].css('width').replace('px', ''))*0.8;
+		var translateValue = getTranslateValue(timelineComponents['eventsWrapper']), 
+			wrapperWidth =  aux; 
 		//translate the timeline to the left('next')/right('prev') 
 		(string == 'next') 
 			? translateTimeline(timelineComponents, translateValue - wrapperWidth + eventsMinDistance, wrapperWidth - timelineTotWidth)
@@ -113,12 +142,11 @@ jQuery(document).ready(function($){
 		value = ( !(typeof totWidth === 'undefined') &&  value < totWidth ) ? totWidth : value; //do not translate more than timeline width
 		setTransformValue(eventsWrapper, 'translateX', value+'px');
 		//update navigation arrows visibility
-		(value == 0 ) ? timelineComponents['timelineNavigation'].find('.prev').addClass('inactive') : timelineComponents['timelineNavigation'].find('.prev').removeClass('inactive');
-		(value == totWidth ) ? timelineComponents['timelineNavigation'].find('.next').addClass('inactive') : timelineComponents['timelineNavigation'].find('.next').removeClass('inactive');
 	}
 
 	function updateFilling(selectedEvent, filling, totWidth) {
 		//change .filling-line length according to the selected event
+		
 		var eventStyle = window.getComputedStyle(selectedEvent.get(0), null),
 			eventLeft = eventStyle.getPropertyValue("left"),
 			eventWidth = eventStyle.getPropertyValue("width");
@@ -136,6 +164,7 @@ jQuery(document).ready(function($){
 	}
 
 	function setTimelineWidth(timelineComponents, width) {
+	
 		var timeSpan = daydiff(timelineComponents['timelineDates'][0], timelineComponents['timelineDates'][timelineComponents['timelineDates'].length-1]),
 			timeSpanNorm = timeSpan/timelineComponents['eventsMinLapse'],
 			timeSpanNorm = Math.round(timeSpanNorm) + 4,

@@ -107,6 +107,7 @@ section.success {
 
 #mainNav {
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin-bottom: 0;
   font-weight: 700;
   padding-top: 25px;
   padding-bottom: 25px;

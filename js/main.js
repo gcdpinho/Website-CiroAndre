@@ -48,4 +48,35 @@
     });
   });
 
+  if ($(window).width() > 1024){
+    $('.slider').css('height', $(window).height()-$('#mainNav').height()-$('.top-bar').height()-50);
+    $('.carousel-inner').css('width', $(window).width()- $(window).width()*30/100);
+    $('.carousel-inner').css('margin-left',$(window).width()*15/100)
+    $('.slider').css('width', '100%');
+
+    $(window).resize(function(){
+      $('.slider').css('height', $(window).height()-$('#mainNav').height()-$('.top-bar').height()-50);
+      $('.carousel-inner').css('width', $(window).width()- $(window).width()*30/100);
+      $('.carousel-inner').css('margin-left',$(window).width()*15/100)
+      $('.slider').css('width', '100%');
+    });
+  }
+  else{
+    var width = 600;
+    if ($(window).width() <= 767)
+      width = 300
+    $('.slider').height(width);
+    $('.slider').css('width', '100%');
+
+    $(window).resize(function(){
+      $('.slider').height(width);
+      $('.carousel-inner').css('width', $(window).width());
+      $('.slider').css('width', '100%');
+      
+    });
+  }
+
+  
+  
+
 })(jQuery); // End of use strict
