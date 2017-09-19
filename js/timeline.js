@@ -3,7 +3,8 @@ jQuery(document).ready(function($){
 		eventsMinDistance = 60;
 
 	(timelines.length > 0) && initTimeline(timelines);
-
+	var timelineWidth = $('.events-wrapper').width() - 40;
+	var translaWidth = 0;
 	function initTimeline(timelines) {
 		timelines.each(function(){
 			var timeline = $(this),
@@ -36,27 +37,25 @@ jQuery(document).ready(function($){
 			});
 			//detect click on the next arrow
 			timelineComponents['timelineNavigation'].on('click', '.next', function(event){
-				var index = Number($('a.selected').attr('value'));
-				$('a[value='+(index+1)+']').click();
-				event.preventDefault();
-				var aux = $('ol#timeline').children('li').length/2;
-				if ($(window).width() < 992)
-					aux = 0
-				if(index+1 > aux)
-					updateSlide(timelineComponents, timelineTotWidth, 'next');
-				updateArrow();
+				if (!$('a.next').hasClass('inactive')){
+					var index = Number($('a.selected').attr('value'));
+					$('a[value='+(index+1)+']').click();
+					event.preventDefault();
+					if($('a[value='+(index+1)+']').position().left+translaWidth > timelineWidth)
+						updateSlide(timelineComponents, timelineTotWidth, 'next');
+					updateArrow();
+				}	
 			});			
 			//detect click on the prev arrow
 			timelineComponents['timelineNavigation'].on('click', '.prev', function(event){
-				var index = Number($('a.selected').attr('value'));
-				$('a[value='+(index-1)+']').click();
-				event.preventDefault();
-				var aux = $('ol#timeline').children('li').length/2;
-				if ($(window).width() < 992)
-					aux = $('ol#timeline').children('li').length
-				if(index-1 < aux)
-					updateSlide(timelineComponents, timelineTotWidth, 'prev');
-				updateArrow();
+				if (!$('a.prev').hasClass('inactive')){
+					var index = Number($('a.selected').attr('value'));
+					$('a[value='+(index-1)+']').click();
+					event.preventDefault();
+					if($('a[value='+(index-1)+']').position().left+translaWidth < 0)
+						updateSlide(timelineComponents, timelineTotWidth, 'prev');
+					updateArrow();
+				}
 			});
 
 			//on swipe, show next/prev event content
@@ -93,16 +92,28 @@ jQuery(document).ready(function($){
 	function updateSlide(timelineComponents, timelineTotWidth, string) {
 		//retrieve translateX value of timelineComponents['eventsWrapper']
 		var aux;
-		if ($(window).width() >= 992)
+		if ($(window).width() >= 770)
 			aux = Number(timelineComponents['timelineWrapper'].css('width').replace('px', ''));
 		else
-			aux = Number(timelineComponents['timelineWrapper'].css('width').replace('px', ''))*0.8;
+			if ($(window).width() > 400)
+				aux = Number(timelineComponents['timelineWrapper'].css('width').replace('px', ''))*0.8;
+			else
+				if ($(window).width() > 360)
+					aux = Number(timelineComponents['timelineWrapper'].css('width').replace('px', ''))*0.9;
+				else
+					if ($(window).width() > 320)
+						aux = Number(timelineComponents['timelineWrapper'].css('width').replace('px', ''));
+					else
+						aux = Number(timelineComponents['timelineWrapper'].css('width').replace('px', ''))*1.1;
+		
 		var translateValue = getTranslateValue(timelineComponents['eventsWrapper']), 
 			wrapperWidth =  aux; 
 		//translate the timeline to the left('next')/right('prev') 
 		(string == 'next') 
 			? translateTimeline(timelineComponents, translateValue - wrapperWidth + eventsMinDistance, wrapperWidth - timelineTotWidth)
 			: translateTimeline(timelineComponents, translateValue + wrapperWidth - eventsMinDistance);
+		
+		//timelineWidth = (translateValue - wrapperWidth + eventsMinDistance)*-1;
 	}
 
 	function showNewContent(timelineComponents, timelineTotWidth, string) {
@@ -141,6 +152,7 @@ jQuery(document).ready(function($){
 		value = (value > 0) ? 0 : value; //only negative translate value
 		value = ( !(typeof totWidth === 'undefined') &&  value < totWidth ) ? totWidth : value; //do not translate more than timeline width
 		setTransformValue(eventsWrapper, 'translateX', value+'px');
+		translaWidth = value;
 		//update navigation arrows visibility
 	}
 
