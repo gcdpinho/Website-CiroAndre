@@ -474,3 +474,29 @@ footer {
 .btn:active,
 .btn:focus {
   outline: none; }
+
+  .facebook-area {
+    margin-left: 70px;
+  }
+
+  .img-face{
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .msg-face{
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .teste {
+    border: 2px solid;
+    border-color: #dfdfdf;
+    border-radius: 3px;
+    margin: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: #ffffff;
+  }
