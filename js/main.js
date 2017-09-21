@@ -76,7 +76,29 @@
     });
   }
 
-  
-  
+  $(document).ready(function() {
+    $.ajaxSetup({ cache: true });
+    $.getScript('https://connect.facebook.net/en_US/sdk.js', function(){
+      FB.init({
+        appId: 'teste',
+        version: 'v2.10' // or v2.1, v2.2, v2.3, ...
+      });     
+      FB.api(
+        '/685084811595387/feed',
+        'GET',
+        {access_token: 'EAACEdEose0cBAD7xAMZBli76KRZALXrzRdJzb45qKFusrdpLP0XrCTYzMxczgInYoutqZCBbkEFsLWuZBDXPRCRfeHhYvaRZCRLYR3IlGmB12ZCq0yfRXe6DJir2XZCpN3pb5qbEi59XLt39qbZAgPPJGLOQj8ZBTPrTh3UNEqfeau01xZCmGbFaZAAYlo1jrs8d2oxgBEnzuPm0wZDZD'},
+        function(response) {
+            console.log(response);
+            for(i=0; i<response.data.length;i++){
+              console.log(response.data[i]['message']);
+              if (response.data[i]['message'] != undefined)
+                $('.facebook-area').append("<div class='teste'>"+response.data[i]['message']+"</div>");
+            }
+        }
+      );
+    });
+    
+  });
+
 
 })(jQuery); // End of use strict
