@@ -52,21 +52,22 @@
     $('.slider').css('height', $(window).height() - $('#mainNav').height() - $('.top-bar').height() - 50);
     $('.carousel-inner').css('width', $(window).width() - $(window).width() * 30 / 100);
     $('.carousel-inner').css('margin-left', $(window).width() * 15 / 100)
-    $('.slider').css('width', '70%');
+    $('.slider').css('width', '50%');
+    $('.slider').css('max-height', $(window).width() * 23 / 100);
 
     $(window).resize(function () {
       $('.slider').css('height', $(window).height() - $('#mainNav').height() - $('.top-bar').height() - 50);
       $('.carousel-inner').css('width', $(window).width() - $(window).width() * 30 / 100);
       $('.carousel-inner').css('margin-left', $(window).width() * 15 / 100)
-      $('.slider').css('width', '70%');
+      $('.slider').css('width', '50%');
     });
-  }
-  else {
+  } else {
     var width = 600;
     if ($(window).width() <= 767)
       width = 300
     $('.slider').height(width);
     $('.slider').css('width', '100%');
+    $('.carousel-inner').css('margin-top', '10px')
 
     $(window).resize(function () {
       $('.slider').height(width);
@@ -77,22 +78,25 @@
   }
 
 
-  $.ajaxSetup({ cache: true });
+  $.ajaxSetup({
+    cache: true
+  });
   $.getScript('https://connect.facebook.net/en_US/sdk.js', function () {
     FB.init({
       appId: 'teste',
       version: 'v2.10' // or v2.1, v2.2, v2.3, ...
     });
     FB.api(
-      '/LeagueofLegendsBrasil/posts?fields=id,message,full_picture,source',
-      'GET',
-      { access_token: 'EAACEdEose0cBABO0lehbnHZBpWCowNnXMjUar4q3Lmd11ntm4gknufiJo9cMGB6l17IbAnRBt10Jy1Ot1ZBTutCMGJjIO3ueNjmoZCvoouEHqgzRKtnuTZCrX7vzQATBTZBgXOhZBccNLik4Dx1FZBHm4eOshbFNyMmd01Qgc494lTo12L0Wo34EOIBEUvNa8MZD' },
+      '/vereadorciroquintino/posts?fields=id,message,full_picture,source',
+      'GET', {
+        access_token: '127372897987875|3G72HfVj8QoyQrwUd-fGM9u0SAQ'
+      },
       function (response) {
         console.log(response);
         for (i = 0; i < response.data.length; i++) {
           if (response.data[i]['message'] != undefined)
             $('.facebook-area').append("<div class='teste'>  <div class='msg-face'> " + response.data[i]['message'] + "</div> \
-          <div class='_3x-2'> <img class='img-face' src=' "+ response.data[i]['full_picture'] +"'/>");
+          <div class='_3x-2'> <img class='img-face' src=' " + response.data[i]['full_picture'] + "'/>");
         }
       }
     );
