@@ -13,13 +13,13 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: "Fira Sans", sans-serif;
+  /*font-family: "Fira Sans", sans-serif;*/
   color: #383838;
   background-color: #f8f8f8;
 }
 
 a {
-  color: #7b9d6f;
+  color: #920f12;
   text-decoration: none;
 }
 
@@ -28,6 +28,9 @@ a {
 Main Components 
 
 -------------------------------- */
+.imgTimeline {
+  height: 250px;
+}
 .cd-horizontal-timeline {
   opacity: 0;
   margin: 0 auto;
@@ -102,7 +105,7 @@ Main Components
   top: 0;
   height: 100%;
   width: 100%;
-  background-color: #7b9d6f;
+  background-color: #920f12;
   -webkit-transform: scaleX(0);
   -moz-transform: scaleX(0);
   -ms-transform: scaleX(0);
@@ -154,18 +157,20 @@ Main Components
   transition: background-color 0.3s, border-color 0.3s;
 }
 .no-touch .cd-horizontal-timeline .events a:hover::after {
-  background-color: #7b9d6f;
-  border-color: #7b9d6f;
+  background-color: #920f12;
+  border-color: #920f12;
 }
 .cd-horizontal-timeline .events a.selected {
   pointer-events: none;
+  color: #920f12;
+  font-weight: bold;
 }
 .cd-horizontal-timeline .events a.selected::after {
-  background-color: #7b9d6f;
-  border-color: #7b9d6f;
+  background-color: #920f12;
+  border-color: #920f12;
 }
 .cd-horizontal-timeline .events a.older-event::after {
-  border-color: #7b9d6f;
+  border-color: #920f12;
 }
 @media only screen and (min-width: 1100px) {
   .cd-horizontal-timeline {
@@ -175,6 +180,21 @@ Main Components
     /* never visible - this is used in jQuery to check the current MQ */
     content: 'desktop';
   }
+}
+@media only screen and (max-width: 768px) {
+    .imgTimeline {
+      height: 180px;
+      margin-bottom: 10px;
+    }
+    ol {
+      padding: 0 18px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .imgTimeline {
+      height: 150px;
+    }
 }
 
 .cd-timeline-navigation a {
@@ -188,8 +208,8 @@ Main Components
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
-  height: 34px;
-  width: 34px;
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
   border: 2px solid #dfdfdf;
   /* replace text with an icon */
@@ -230,7 +250,7 @@ Main Components
   right: 0;
 }
 .no-touch .cd-timeline-navigation a:hover {
-  border-color: #7b9d6f;
+  border-color: #920f12;
 }
 .cd-timeline-navigation a.inactive {
   cursor: not-allowed;
@@ -303,8 +323,8 @@ Main Components
 }
 .cd-horizontal-timeline .events-content h2 {
   font-weight: bold;
-  font-size: 2.6rem;
-  font-family: "Playfair Display", serif;
+  font-size: 2.3rem;
+  /*font-family: "Playfair Display", serif;*/
   font-weight: 700;
   line-height: 1.2;
 }
@@ -323,16 +343,18 @@ Main Components
 .cd-horizontal-timeline .events-content em, .cd-horizontal-timeline .events-content p {
   line-height: 1.6;
 }
+
 @media only screen and (min-width: 768px) {
   .cd-horizontal-timeline .events-content h2 {
-    font-size: 7rem;
-  }
-  .cd-horizontal-timeline .events-content em {
     font-size: 2rem;
   }
-  .cd-horizontal-timeline .events-content p {
+  .cd-horizontal-timeline .events-content em {
     font-size: 1.8rem;
   }
+  .cd-horizontal-timeline .events-content p {
+    font-size: 1.6rem;
+  }
+
 }
 
 @-webkit-keyframes cd-enter-right {

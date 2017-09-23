@@ -5,6 +5,7 @@ jQuery(document).ready(function($){
 	(timelines.length > 0) && initTimeline(timelines);
 	var timelineWidth = $('.events-wrapper').width() - 40;
 	var translaWidth = 0;
+	minHeightTimeLine();
 	function initTimeline(timelines) {
 		timelines.each(function(){
 			var timeline = $(this),
@@ -79,6 +80,16 @@ jQuery(document).ready(function($){
 		});
 	}
 	
+	function minHeightTimeLine(){
+		var li = $('.events-content').find('li');
+		var s = 0;
+		for (i=0; i<li.length; i++){
+			if (s < $(li[i]).height())
+				s = $(li[i]).height();
+		}
+		$('.events-content').css('min-height', s+'px'); 
+	}
+
 	function updateArrow(){
 		if ($('a.selected').attr('value') == "0")  
 			$('a.prev').addClass('inactive')
