@@ -1,6 +1,6 @@
 (function ($) {
   "use strict"; // Start of use strict
-  /*
+  
     // Smooth scrolling using jQuery easing
     $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
       if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
@@ -14,7 +14,7 @@
         }
       }
     });
-  */
+
   // Closes responsive menu when a scroll trigger link is clicked
   $('.js-scroll-trigger').click(function () {
     $('.navbar-collapse').collapse('hide');
@@ -27,7 +27,7 @@
   });
 
 
-  /*
+  
     // Collapse the navbar when page is scrolled
     $(window).scroll(function() {
       if ($("#mainNav").offset().top > 100) {
@@ -36,7 +36,7 @@
         $("#mainNav").removeClass("navbar-shrink");
       }
     });
-  */
+  
   // Floating label headings for the contact form
   $(function () {
     $("body").on("input propertychange", ".floating-label-form-group", function (e) {
@@ -52,14 +52,18 @@
     $('.slider').css('height', $(window).height() - $('#mainNav').height() - $('.top-bar').height() - 50);
     $('.carousel-inner').css('width', $(window).width() - $(window).width() * 30 / 100);
     $('.carousel-inner').css('margin-left', $(window).width() * 15 / 100)
-    $('.slider').css('width', '50%');
-    $('.slider').css('max-height', $(window).width() * 23 / 100);
+    $('.slider').css('width', '70%');
+    var img = $('.slider');
+    $('.slider').css('min-height', img[0].height);
 
     $(window).resize(function () {
       $('.slider').css('height', $(window).height() - $('#mainNav').height() - $('.top-bar').height() - 50);
       $('.carousel-inner').css('width', $(window).width() - $(window).width() * 30 / 100);
       $('.carousel-inner').css('margin-left', $(window).width() * 15 / 100)
-      $('.slider').css('width', '50%');
+      $('.slider').css('width', '70%');
+      var img = $('.slider');
+      $('.slider').css('min-height', img[0].height);
+
     });
   } else {
     var width = 600;
@@ -93,14 +97,59 @@
       },
       function (response) {
         console.log(response);
-        for (i = 0; i < response.data.length; i++) {
+        var index = 0;
+        while (response.data[index]['message'] == undefined)
+          index++;
+        $('.msg-princ').html(response.data[index]['message']);
+        $('.img-princ').html("<img class='img-face' src=' " + response.data[index]['full_picture'] + "'/>");
+        index++;
+        while (response.data[index]['message'] == undefined)
+          index++;
+        $('.msg-not1').html(response.data[index]['message']);
+        $('.img-not1').html("<img class='img-face' src=' " + response.data[index]['full_picture'] + "'/>");
+        index++;
+        while (response.data[index]['message'] == undefined)
+          index++;
+        $('.msg-not2').html(response.data[index]['message']);
+        $('.img-not2').html("<img class='img-face' src=' " + response.data[index]['full_picture'] + "'/>");
+        /*
+        for (i = 0; i < response.data.length && i<=3; i++) {
           if (response.data[i]['message'] != undefined)
-            $('.facebook-area').append("<div class='teste'>  <div class='msg-face'> " + response.data[i]['message'] + "</div> \
+            $('.facebook-area').append("<div class='row not'>  <div class='msg-face'> " + response.data[i]['message'] + "</div> \
           <div class='_3x-2'> <img class='img-face' src=' " + response.data[i]['full_picture'] + "'/>");
         }
+        */
       }
     );
   });
 
+  $('.not1').click(function(){
+    var msgPrinc = $('.msg-princ').html();
+    var imgPrinc = $('.img-princ').html();
+    
+    var newMsgPrinc = $('.msg-not1').html();
+    var newIMGPrinc = $('.img-not1').html();
 
+    $('.msg-princ').html(newMsgPrinc);
+    $('.img-princ').html(newIMGPrinc);
+    $('.img-not1').html(imgPrinc);
+    $('.msg-not1').html(msgPrinc);
+  });
+
+  $('.not2').click(function(){
+    var msgPrinc = $('.msg-princ').html();
+    var imgPrinc = $('.img-princ').html();
+    
+    var newMsgPrinc = $('.msg-not2').html();
+    var newIMGPrinc = $('.img-not2').html();
+
+    $('.msg-princ').html(newMsgPrinc);
+    $('.img-princ').html(newIMGPrinc);
+    $('.img-not2').html(imgPrinc);
+    $('.msg-not2').html(msgPrinc);
+  });
+
+  $('#n-more').click(function(){
+    location.href = "pages/noticias/noticias.html";
+  });
 })(jQuery); // End of use strict
