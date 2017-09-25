@@ -109,6 +109,41 @@ section.success {
   section.first {
     padding-top: 75px;
   }
+
+  .img-face {
+    width: 60% !important;
+  }
+
+  .not1 {
+    border: none !important;
+  }
+
+  .noticias-more {
+    margin-top: 1em !important;
+    margin-bottom: 2em !important;
+  }
+
+  .video-col {
+    border-top: 2px solid #a0a0a0;
+  }
+
+  .video-title {
+    margin-top: 1em !important;
+  }
+
+ 
+  .miss{
+    margin-top: 2em;
+  }
+
+  .fale {
+    margin-top: 2em;
+    border-top: 2px solid #a0a0a0;
+  }
+
+  .fale-title {
+    margin-top: 2em;
+  }
 }
 
 .scroll-top {
@@ -156,7 +191,7 @@ section.success {
   padding: 25px 0 30px 0;
 }
 
-.video {
+.y-video {
   width: 100%;
   padding-bottom: 1.5em;
 }
@@ -170,21 +205,21 @@ section.success {
 }
 
 .youtube-video {
-  widows: 200px;
-  height: 200px;
+  width: 80%;
+  height: 250px;
   display: inline-block;
 }
 
-.frase {
-  margin-top: 4em;
+.missao, .frase {
+  margin: 2em;
 }
 
-.missao {
-  margin-bottom: 2em;
+#contactForm {
+  margin: 0 2em;
 }
 
 .youtube-div {
-  margin-top: 2em;
+  margin: 2em;
   text-align: center;
 }
 
@@ -368,9 +403,18 @@ section.success {
   z-index: 2;
 }
 
-@media (min-width: 767px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   #portfolio .portfolio-item {
     margin: 0 0 30px;
+  }
+
+  .video-col, .fale {
+    border:none;
+  }
+
+  .youtube-video {
+    width: 100%;
+    height: 150px;
   }
 }
 
@@ -459,10 +503,6 @@ section.success {
 
 .form-control:focus{
   background: #f8f8f8;
-}
-
-.fale {
-  padding-left: 5em;
 }
 
 .floating-label-form-group input,
@@ -711,9 +751,6 @@ fieldset[disabled] .btn-success:hover {
   outline: none;
 }
 
-.facebook-area {
-  margin-left: 70px;
-}
 
 .img-face {
   width: 30%;
@@ -728,6 +765,10 @@ fieldset[disabled] .btn-success:hover {
 
 .msg-not1, .msg-not2 {
   font-size: 1.2rem;
+}
+
+.msg-princ {
+  cursor: default;
 }
 
 .not1 {
@@ -765,13 +806,14 @@ fieldset[disabled] .btn-success:hover {
   display: block;
   margin: 0 auto;
   padding-bottom: 1em;
-  cursor: default;
 }
 
 .princ {
   padding-top: 1em;
   border: 2px solid #a0a0a0;
   background: #f8f8f8;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
 }
 
 .sec {
@@ -793,3 +835,4 @@ fieldset[disabled] .btn-success:hover {
 .container {
   padding: 0;
 }
+
