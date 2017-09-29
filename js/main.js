@@ -47,6 +47,8 @@
       $(this).removeClass("floating-label-form-group-with-focus");
     });
   });
+  if ($(window).width() >= 768)
+    $('body').css('margin-bottom', $('footer').height()+"px");
 
   if ($(window).width() > 1024) {
     $('.slider').css('height', $(window).height() - $('#mainNav').height() - $('.top-bar').height() - 50);
