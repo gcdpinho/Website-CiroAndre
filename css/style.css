@@ -845,14 +845,6 @@ fieldset[disabled] .btn-success:hover {
     list-style: none;
 }
 
-.btn-outline-header {
-  font-size: 20px;
-  margin-top: 6px;
-  transition: all 0.3s ease-in-out;
-  color: white;
-  border: solid 2px white;
-  background: transparent;
-}
 
 .btn-social-header {
   font-size: 20px;
@@ -863,11 +855,15 @@ fieldset[disabled] .btn-success:hover {
   text-align: center;
   border: 2px solid white;
   border-radius: 100%;
+  margin-top: 6px;
+  transition: all 0.3s ease-in-out;
+  color: white;
+  background: transparent;
 }
 
 /* MISSAO */
 .img-radio {
-    width: 70%;
+    width: 60%;
     align-content: center;
     margin: 20px 0px 0px 50px;
 }
