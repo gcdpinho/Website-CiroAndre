@@ -101,6 +101,15 @@ section.success {
 }
 
 @media (max-width: 768px) {
+
+  .pages-noticias{
+    margin: 0 !important;
+  }
+  
+  .noticias-img{
+    width: 90% !important;
+  }
+
   #mainNav .navbar-brand {
     max-width: 200px;
   }
