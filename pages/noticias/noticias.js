@@ -22,7 +22,7 @@
                 for (var i = 0; i < response.data.length; i++) {
                     if (response.data[i]['message'] != undefined) {
                         $('.pages-not'+aux).append("<div class='row not'>  <div class='_3x-2 text-center'> <img class='noticias-img' src=' " + response.data[i]['full_picture'] + "'/> \
-                        <div class='noticia-msg'> " + response.data[i]['message'] + "</div>");
+                        <div class='noticia-msg' align='justify'> " + response.data[i]['message'] + "</div>");
                         if (aux == 1)
                             aux = 2;
                         else
