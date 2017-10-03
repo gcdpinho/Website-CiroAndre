@@ -73,7 +73,7 @@
             <a class="nav-link js-scroll-trigger" href="pages/noticias/noticias.html">Notícias</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contact">Fale com Ciro</a>
+            <a class="nav-link js-scroll-trigger" href="pages/contato/contato.html">Fale com Ciro</a>
           </li>
         </ul>
       </div>
@@ -83,6 +83,16 @@
   <div class="below-navbar-green"></div>
   <!-- Slider -->
   <section id="image-slider">
+    <div class="row">
+      <div class="col">
+      </div>
+      <div class="col text-center mapa">
+        <div id="mapa-desk">
+
+        </div>
+      </div>
+    </div>
+    <!--
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -113,6 +123,7 @@
       <span class="sr-only">Próximo</span>
     </a>
     </div>
+    -->
   </section>
   <!--
   <div class="top-bar-green"></div>
@@ -313,10 +324,9 @@
   <!-- Contact Section -->
   <section id="contact">
     <div class="contato">
-      <h2 class="text-center">Contato</h2>
       <div class="row">
         <div class="col-md-6 miss">
-          <h1 class="text-center">Missão</h1>
+          <h2 class="text-center">Missão</h2>
           <p class="missao" align="justify">
             Trabalhar por Gaspar tem sido meu projeto de vida. Aqui nasci, estudei e fiz amigos e acredito na força desse povo guerreiro
             que aqui reside. Nossa cidade é um lugar de oportunidades de muitas possibilidades e como legislador meu papel
@@ -331,7 +341,7 @@
           </div>
         </div>
         <div class="col fale">
-          <h1 class="text-center fale-title">Fale com Ciro</h1>
+          <h2 class="text-center fale-title">Fale com Ciro</h2>
           <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
           <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
           <form name="sentMessage" id="contactForm" novalidate>
@@ -441,15 +451,13 @@
   <script src="js/jqBootstrapValidation.js"></script>
   <script src="js/contact_me.js"></script>
 
-  <script src="js/moderzin.js"></script>
+  <script src="vendor/moderzin/moderzin.js"></script>
   <!-- Modernizr -->
   <!-- Custom scripts for this template -->
   <script src="js/main.js"></script>
   <script src="js/timeline.js"></script>
-
-
-
-
+  <script src="vendor/mapa-plugin/mapa-plugin.js"></script>
+  <script src="js/map.js"></script>
 
 </body>
 

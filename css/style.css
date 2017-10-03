@@ -927,3 +927,13 @@ fieldset[disabled] .btn-success:hover {
   margin: 0 1em;
   margin-bottom: 1em;
 }
+
+.contato-ciro{
+  margin: 0 auto;
+  width: 60%;
+}
+
+#contato{
+  padding: 50px 0;
+  background-color: #fbfbfb;
+}
