@@ -55,7 +55,9 @@
   if ($(window).width() <= 1024){
     $('.mapa').html('<div id="mapa-mobile"></div>')
   }
-  /*
+
+
+  /* ----Slider-----
   if ($(window).width() > 1024) {
     $('.slider').css('height', $(window).height() - $('#mainNav').height() - $('.top-bar').height() - 50);
     $('.carousel-inner').css('width', $(window).width() - $(window).width() * 30 / 100);
