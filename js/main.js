@@ -5,7 +5,8 @@
     $(window).scrollTop(0);
   });
   */
- 
+  var numProjetos = 11;
+
   // Smooth scrolling using jQuery easing
   $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
@@ -31,8 +32,6 @@
     offset: 54
   });
 
-
-
   // Collapse the navbar when page is scrolled
   $(window).scroll(function () {
     if ($("#mainNav").offset().top > 100) {
@@ -53,12 +52,66 @@
     });
   });
 
-
   if ($(window).width() >= 768)
     $('body').css('margin-bottom', $('footer').height() + "px");
 
   if ($(window).width() <= 1024) {
     $('.mapa').html('<div id="mapa-mobile"></div>')
+  }
+
+   for (var i=numProjetos+1; i<=21; i++){
+    $('#heading'+i).closest('.card').css('display', 'none');
+  }
+
+  var numPages = Math.ceil(21/numProjetos);
+  for (var i=0; i<numPages; i++){
+    $('.pagination').append('<li class="page-item page"><a class="page-link" value='+(i+1)+ ' href="#">'+(i+1)+'</a></li>');
+  }
+  $('.pagination').append('<li class="page-item"><a class="page-link next-page" href="#">Next</a></li>');
+  editPageActive(1);
+  
+  $('.next-page').click(function(){
+    $('.previous-page').closest('.page-item').removeClass('disabled');
+    var next = parseInt($('.page-item.active').find('.page-link').text().split('(')[0])+1;
+    if (next == numPages)
+      $('.next-page').closest('.page-item').addClass('disabled');
+    editPageActive(next);
+
+  });
+
+  $('.previous-page').click(function(){
+    $('.next-page').closest('.page-item').removeClass('disabled');
+    var previous = parseInt($('.page-item.active').find('.page-link').text().split('(')[0])-1;
+    if (previous == 1)
+      $('.previous-page').closest('.page-item').addClass('disabled');
+    editPageActive(previous);
+  });
+
+  $('.page').click(function(){
+    
+    var active = parseInt($('.page-item.active').find('.page-link').text().split('(')[0]);
+    var atual = $(this).find('.page-link').attr('value');
+    var diff = active-atual;
+    if (diff > 0)
+      for (var i=0; i<diff; i++)
+        $('.previous-page').click();
+    else
+      for (var i=0; i<diff*-1; i++)
+        $('.next-page').click();
+  });
+
+  function editPageActive(index){
+    var older = $('.page-item.active');
+
+    if (older.length > 0){
+      var value = older.find('.page-link').text().split('(')[0];
+      older.removeClass('active');
+      older.html('<a class="page-link" value='+value+ ' href="#">'+value+'</a>');
+
+    }
+    var choose = $('.page-link[value='+index+']').closest('.page-item');
+    choose.addClass('active')
+    choose.html('<span class="page-link">'+index+'<span class="sr-only">(current)</span></span>');
   }
 
 
