@@ -11,6 +11,7 @@
   <title>Ciro André Quintino</title>
 
   <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
 
   <!-- Custom fonts for this template -->
@@ -25,9 +26,15 @@
 </head>
 
 <body id="page-top">
-  <div id="loader"></div>
 
-
+  <!-- Loader
+  <div id="loader">
+    <div class="progress-bar">
+      <div id="progress-bar" class="progress-bar-loading text-center">0%</div>
+    </div>   
+  </div>
+  <div class="background-loader"></div>
+-->
   <div class="top-bar-red">
     <ul class="list-inline-header">
       <li class="list-inline-item">
@@ -129,7 +136,7 @@
   </section>
   <!--
   <div class="top-bar-green"></div>
-  <!-- Linha do Tempo -->
+  <!-- Linha do Tempo
   <section class="cd-horizontal-timeline">
     <h2 class="text-center">Linha do Tempo</h2>
     <div class="timeline">
@@ -147,17 +154,17 @@
 
           <span class="filling-line" aria-hidden="true"></span>
         </div>
-        <!-- .events -->
+        <!-- .events 
       </div>
-      <!-- .events-wrapper -->
+      <!-- .events-wrapper 
 
       <ul class="cd-timeline-navigation">
         <li><a href="#0" class="prev inactive">Prev</a></li>
         <li><a href="#0" class="next">Next</a></li>
       </ul>
-      <!-- .cd-timeline-navigation -->
+      <!-- .cd-timeline-navigation 
     </div>
-    <!-- .timeline -->
+    <!-- .timeline 
 
     <div class="events-content">
       <ol>
@@ -255,14 +262,16 @@
 
       </ol>
     </div>
-    <!-- .events-content -->
+    <!-- .events-content 
 
   </section>
+-->
   <section id="midia">
     <div class="social-midia">
       <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-8 not-mobile">
           <h2 class="text-center">Notíticas</h2>
+          <div id="loader"></div>
           <div class="facebook-area">
             <div class="row princ">
               <div class="msg-face msg-princ" align="justify">
@@ -458,8 +467,9 @@
   <!-- Custom scripts for this template -->
   <script src="js/timeline.js"></script>
   <script src="vendor/mapa-plugin/mapa-plugin.js"></script>
-  <script src="vendor/loader/progressbar.js"></script>
+  <script src="js/main.js"></script>
   <script src="js/map.js"></script>
+
 
 </body>
 

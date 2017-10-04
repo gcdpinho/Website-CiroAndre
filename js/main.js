@@ -1,6 +1,11 @@
 (function ($) {
   "use strict"; // Start of use strict
-
+  /* Loader
+  $(window).on('beforeunload', function () {
+    $(window).scrollTop(0);
+  });
+  */
+ 
   // Smooth scrolling using jQuery easing
   $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
@@ -48,15 +53,40 @@
     });
   });
 
-  
-  if ($(window).width() >= 768)
-    $('body').css('margin-bottom', $('footer').height()+"px");
 
-  if ($(window).width() <= 1024){
+  if ($(window).width() >= 768)
+    $('body').css('margin-bottom', $('footer').height() + "px");
+
+  if ($(window).width() <= 1024) {
     $('.mapa').html('<div id="mapa-mobile"></div>')
   }
 
 
+  /*Loader
+  var screenH = $(window).height();
+  var screenW = $(window).width();
+  $('#loader').css('top', screenH / 2);
+  var value = screenW / 2 - $("#loader").width() / 2;
+  if (value < 0)
+    value *= -1;
+  $('#loader').css('left', value);
+  var bar = $('#progress-bar')
+  var width = bar.width();
+  var id = setInterval(frame, 5);
+
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+      $('#loader').remove();
+      $('.background-loader').remove();
+      $('html').css('overflow-y', 'auto');
+    } else {
+      width++;
+      bar.width(width + '%');
+      bar.html(width * 1 + '%');
+    }
+  }
+  */
   /* ----Slider-----
   if ($(window).width() > 1024) {
     $('.slider').css('height', $(window).height() - $('#mainNav').height() - $('.top-bar').height() - 50);
@@ -125,6 +155,11 @@
           $('.msg-not2').html(response.data[index]['message']);
           $('.img-not2').html("<img class='img-face' src=' " + response.data[index]['full_picture'] + "'/>");
         }
+
+        $('#loader').remove();
+        $('.facebook-area').css('display', 'block');
+        $('.not-mobile').css('min-height', '100px');
+
         /*
         for (i = 0; i < response.data.length && i<=3; i++) {
           if (response.data[i]['message'] != undefined)
@@ -167,7 +202,7 @@
     location.href = "pages/noticias/noticias.html";
   });
 
-  $('#v-more').click(function(){
+  $('#v-more').click(function () {
     location.href = "https://www.youtube.com/channel/UCERR4R9UhCQ2aKMBxS9VLSw";
   });
 })(jQuery); // End of use strict

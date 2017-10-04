@@ -9,7 +9,6 @@ body {
   overflow-x: hidden;
 }
 
-
 p {
   font-size: 20px;
 }
@@ -790,7 +789,7 @@ fieldset[disabled] .btn-success:hover {
 
 
 .img-face {
-  width: 40%;
+  width: 50%;
   display: block;
   margin: 0 auto;
   padding-bottom: 1em;
@@ -855,6 +854,8 @@ fieldset[disabled] .btn-success:hover {
 
 .sec {
   margin-top: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
 .img-fluid {
@@ -915,6 +916,7 @@ fieldset[disabled] .btn-success:hover {
 
 .pages-noticias{
   margin: 1em 3em;
+  display: none;
 }
 
 .not {
@@ -941,4 +943,64 @@ fieldset[disabled] .btn-success:hover {
   padding: 50px 0;
   background-color: #fbfbfb;
 }
+/*
+.progress-bar{
+  background-color: #dfdfdf;
+  font-size: 0.7em;
+}
 
+.progress-bar-loading{
+  background-color: #920f12;
+  width: 0%;
+}
+
+#loader{
+  position: absolute;
+  width: 70%;
+  z-index:1000;
+}
+
+.background-loader{
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.9;
+  z-index: 999;
+}
+*/
+
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  margin: -50px 0 0 -50px;
+  border: 16px solid #f8f8f8;
+  border-radius: 50%;
+  border-top: 16px solid #920f12;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.facebook-area{
+  display: none;
+}
+
+.not-mobile{
+  min-height: 500px;
+}

@@ -4,6 +4,7 @@
     $('.noticias').css('color', '#327964')
     $('.noticias').css('border-bottom-color', '#920f12')
 
+
     $.ajaxSetup({
         cache: true
     });
@@ -29,7 +30,9 @@
                             aux = 1;
                     }
                 }
-
+                $('#loader').remove();
+                $('.pages-noticias').css('display', 'flex');
+                $('.not-mobile').css('min-height', '100px');
             }
         );
     });
