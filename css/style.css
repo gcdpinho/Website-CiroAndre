@@ -102,6 +102,10 @@ section.success {
 
 @media (max-width: 768px) {
 
+  .contato-ciro{
+    width: 90% !important;
+  }
+
   .pages-noticias{
     margin: 0 !important;
   }
@@ -226,7 +230,7 @@ section.success {
 }
 
 #contactForm {
-  margin: 0 2em;
+  margin: 0 3em;
 }
 
 .youtube-div {
@@ -937,3 +941,4 @@ fieldset[disabled] .btn-success:hover {
   padding: 50px 0;
   background-color: #fbfbfb;
 }
+
