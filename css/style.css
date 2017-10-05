@@ -22,8 +22,12 @@ a.active,
 a:active,
 a:focus,
 a:hover {
-  color: #18BC9C;
+  color: #920f12;
   outline: none;
+}
+
+.h5, h5{
+  font-size: 1em;
 }
 
 h2,
@@ -1013,10 +1017,38 @@ fieldset[disabled] .btn-success:hover {
   margin-bottom: 1em;
 }
 
-.card-header{
-  padding: 1.25rem 1.25rem;
-}
-
 .card-block{
   margin: 1.2em;
+}
+
+.page-link{
+  background-color: #f8f8f8 !important;
+  color: black;
+}
+
+.page-link:hover{
+  color:#920f12;
+}
+
+.page-item.active .page-link{
+  background-color: #920f12 !important;
+  border-color: #920f12;
+  color: white;
+  font-weight: bold;
+}
+
+#mapa-desk{
+  margin-top: 2em;
+}
+
+.page-item.disabled .page-link{
+  color: #dfdfdf;
+}
+
+.icon-page{
+  font-size: 1.5em;
+}
+
+.next-page, .previous-page{
+  padding: 0.2rem 0.75rem;
 }
