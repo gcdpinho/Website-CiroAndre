@@ -9,6 +9,10 @@ body {
   overflow-x: hidden;
 }
 
+html{
+  overflow-y: hidden;
+}
+
 p {
   font-size: 20px;
 }
@@ -947,7 +951,7 @@ fieldset[disabled] .btn-success:hover {
   padding: 50px 0;
   background-color: #fbfbfb;
 }
-/*
+
 .progress-bar{
   background-color: #dfdfdf;
   font-size: 0.7em;
@@ -974,8 +978,8 @@ fieldset[disabled] .btn-success:hover {
   opacity: 0.9;
   z-index: 999;
 }
-*/
 
+/* Loader
 #loader {
   position: absolute;
   left: 50%;
@@ -1008,7 +1012,7 @@ fieldset[disabled] .btn-success:hover {
 .not-mobile{
   min-height: 500px;
 }
-
+*/
 .list-projetos{
   margin: 2em;
 }

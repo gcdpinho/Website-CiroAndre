@@ -1,17 +1,17 @@
 (function ($) {
   "use strict"; // Start of use strict
-  /* Loader
+  
   $(window).on('beforeunload', function () {
     $(window).scrollTop(0);
   });
-  */
+  
   if ($(window).width() > 1024)
     var numProjetos = 11;
   else
     var numProjetos = 6;
 
 
-  var flagAnimation = true;
+  var flagAnimation = $('.previous-page').attr('value');
   // Smooth scrolling using jQuery easing
   $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
@@ -82,7 +82,8 @@
       $('#heading' + i).closest('.card').css('display', 'block');
       $('#heading' + (i - numProjetos)).closest('.card').css('display', 'none');
     }
-    if (flagAnimation) {
+    flagAnimation = $('.previous-page').attr('value');
+    if (flagAnimation == "true") {
       $('#accordion').toggle("slide");
       setTimeout(function () {
         $('#accordion').toggle("slide");
@@ -106,7 +107,8 @@
       $('#heading' + i).closest('.card').css('display', 'none');
       $('#heading' + (i - numProjetos)).closest('.card').css('display', 'block');
     }
-    if (flagAnimation) {
+    flagAnimation = $('.previous-page').attr('value');
+    if (flagAnimation == "true") {
       $('#accordion').toggle("slide");
       setTimeout(function () {
         $('#accordion').toggle("slide");
@@ -123,20 +125,22 @@
     var active = parseInt($('.page-item.active').find('.page-link').text().split('(')[0]);
     var atual = $(this).find('.page-link').attr('value');
     var diff = active - atual;
-    flagAnimation = false;
+    $('.previous-page').attr('value', 'false');
     if (diff > 0)
       for (var i = 0; i < diff; i++) {
         if (i == diff - 1)
-          flagAnimation = true;
+          $('.previous-page').attr('value', 'true');
         $('.previous-page').click();
       }
     else
       for (var i = 0; i < diff * -1; i++) {
-        if (i == diff*-1 - 1)
-          flagAnimation = true;
+        if (i == diff * -1 - 1)
+          $('.previous-page').attr('value', 'true');
         $('.next-page').click();
       }
   });
+
+
 
   function editPageActive(index) {
     var older = $('.page-item.active');
@@ -153,7 +157,6 @@
   }
 
 
-  /*Loader
   var screenH = $(window).height();
   var screenW = $(window).width();
   $('#loader').css('top', screenH / 2);
@@ -163,7 +166,7 @@
   $('#loader').css('left', value);
   var bar = $('#progress-bar')
   var width = bar.width();
-  var id = setInterval(frame, 5);
+  var id = setInterval(frame, 15);
 
   function frame() {
     if (width >= 100) {
@@ -177,7 +180,7 @@
       bar.html(width * 1 + '%');
     }
   }
-  */
+  
   /* ----Slider-----
   if ($(window).width() > 1024) {
     $('.slider').css('height', $(window).height() - $('#mainNav').height() - $('.top-bar').height() - 50);
@@ -246,7 +249,7 @@
           $('.msg-not2').html(response.data[index]['message']);
           $('.img-not2').html("<img class='img-face' src=' " + response.data[index]['full_picture'] + "'/>");
         }
-
+        /* Loader
         $('#loader').remove();
         $('.facebook-area').css('display', 'block');
         $('.not-mobile').css('min-height', '100px');

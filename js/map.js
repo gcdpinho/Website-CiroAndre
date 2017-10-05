@@ -1,3 +1,8 @@
+if ($(window).width() > 1024)
+    var numProjetos = 11;
+else
+    var numProjetos = 6;
+
 if ($('#mapa-desk').length) {
     var rsr = Raphael('mapa-desk', '500', '670.732');
     var ba = rsr.path("M62.185,24.127c-0.837,0.898-2.931,2.872-4.606,4.307c-1.735,1.436-3.11,2.932-3.11,3.351c0,0.358-0.659,1.316-1.497,2.094 s-1.495,1.674-1.495,1.915c0,0.299,1.196,2.034,2.692,3.888l2.693,3.291v5.265c0,2.931-0.24,5.504-0.599,5.683 c-0.298,0.179-0.598,1.077-0.598,1.974c0,0.897-0.36,2.334-0.838,3.171c-2.274,4.367-2.751,15.614-0.718,17.828 c0.538,0.598,0.958,1.375,0.958,1.734c0,0.419,0.659,1.794,1.496,3.111c0.836,1.316,1.495,2.572,1.495,2.871 c0,0.299,0.539,1.017,1.197,1.615c0.897,0.838,1.196,1.854,1.196,4.487c0,3.111,0.179,3.529,2.393,5.683 c2.992,2.932,4.188,5.444,4.188,8.854c0,1.496,0.299,2.932,0.598,3.111c0.359,0.179,0.599,1.256,0.599,2.273 c0,1.556-0.42,2.214-1.856,3.051c-2.631,1.555-4.666,6.52-5.085,12.623c-0.238,2.991-0.178,5.325,0.239,6.042 c0.838,1.615,5.923,3.11,12.086,3.529c5.744,0.419,8.137,1.197,8.973,2.751c1.018,1.855,0.66,2.992-2.094,6.043 c-2.393,2.632-2.692,3.35-2.692,5.803c0,3.529,1.018,7.238,2.393,8.733c0.599,0.658,1.196,2.153,1.316,3.29 c0.179,1.795,0.419,2.094,1.795,2.274c1.137,0.119,2.094-0.239,2.991-1.256c0.777-0.838,6.042-4.726,11.726-8.734l10.349-7.239 h6.221h6.161l3.53-10.648l3.589-10.589l10.111-0.179l10.109-0.18l7.896,3.709l7.958,3.708l8.854-4.007l8.854-4.008l1.975-5.983 c1.436-4.367,2.451-6.521,3.888-7.957c1.734-1.735,2.033-2.394,2.393-6.401c0.358-4.308,0.299-4.547-1.317-6.761 c-1.436-1.974-2.571-2.572-7.417-4.247c-3.11-1.077-6.341-2.334-7.119-2.752c-1.914-1.077-5.743-3.41-8.553-5.265l-2.274-1.496 l0.24-4.068c0.179-2.273,0.717-4.666,1.316-5.563c0.538-0.778,1.137-2.692,1.376-4.188c0.298-2.453,0.178-2.93-1.317-4.486 c-0.958-1.017-2.034-1.795-2.453-1.795c-1.197,0-2.035-1.496-2.393-4.308c-0.299-2.213-0.12-3.35,1.018-5.623 c0.777-1.616,1.555-3.051,1.733-3.231c0.18-0.179,0.898-1.197,1.677-2.273c1.495-2.154,1.376-3.53-0.48-5.205 c-0.657-0.599-1.197-1.437-1.197-1.915c0-0.598-1.375-0.778-5.863-0.778c-5.802,0-5.922,0-7.657,1.855 c-1.914,1.974-6.042,4.128-8.016,4.128c-0.658,0-1.734,0.239-2.393,0.598c-0.657,0.299-1.734,0.897-2.452,1.197 c-1.557,0.837-7.898,0.239-11.008-1.077c-1.317-0.538-2.99-1.615-3.709-2.333c-0.718-0.778-1.855-1.375-2.513-1.375 c-0.657,0-1.376-0.299-1.555-0.599c-0.18-0.358-1.138-0.598-2.033-0.598c-0.958,0-2.034-0.419-2.455-0.897 c-0.418-0.479-1.075-0.898-1.495-0.898c-0.358,0-1.196-0.538-1.794-1.196c-0.599-0.658-1.435-1.196-1.855-1.196 c-0.956,0-3.229-3.111-3.229-4.427c0-1.675-2.333-5.443-4.008-6.461c-1.077-0.598-3.948-1.077-7.957-1.375 c-5.024-0.299-6.939-0.719-9.573-1.974c-2.991-1.436-4.066-1.616-11.365-1.795l-8.076-0.18L62.185,24.127z");
@@ -126,9 +131,9 @@ if ($('#mapa-desk').length) {
         'stroke-opacity': '1',
         'fill': '#000000'
     }).data('id', 'ag');
-    var rsrGroups = [ba, bc, bb, bv, ao, me, lg, fg, cl, cn, ss, pg, gg, gs, gm , st, mc, br, bt, ag, ga];
+    var rsrGroups = [ba, bc, bb, bv, ao, me, lg, fg, cl, cn, ss, pg, gg, gs, gm, st, mc, br, bt, ag, ga];
 
-    
+
 }
 
 
@@ -261,18 +266,544 @@ if ($('#mapa-mobile').length) {
         'stroke-opacity': '1',
         'fill': '#000000'
     }).data('id', 'ag');
-    
-    var rsrGroups = [ba, bc, bb, bv, ao, me, lg, fg, cl, cn, ss, pg, gg, gs, gm , st, mc, br, bt, ag, ga];
+
+    var rsrGroups = [ba, bc, bb, bv, ao, me, lg, fg, cl, cn, ss, pg, gg, gs, gm, st, mc, br, bt, ag, ga];
 }
 
-    for (var i=0; i<rsrGroups.length; i++){
-        rsrGroups[i].attr('cursor', 'pointer');
-        rsrGroups[i].mouseover(function(e){
-            this.node.style.opacity = 0.7;
-            
-        });
-    
-        rsrGroups[i].mouseout(function(e){
-            this.node.style.opacity = 1;
-        });
+for (var i = 0; i < rsrGroups.length; i++) {
+    rsrGroups[i].attr('cursor', 'pointer');
+
+    rsrGroups[i].mouseover(function (e) {
+        this.node.style.opacity = 0.7;
+
+    });
+
+    rsrGroups[i].mouseout(function (e) {
+        this.node.style.opacity = 1;
+    });
+}
+
+ba.click(function () {
+    while ($('#collpase1').closest('.card').css('display') == 'none') {
+        var aux = parseInt($('.page-item.active').find('.page-link').text().split('(')[0]);
+        if (aux * numProjetos > 1) {
+            if ((aux - 2) * numProjetos + 1 <= 1)
+                $('.previous-page').attr('value', 'true');
+            else
+                $('.previous-page').attr('value', 'false');
+            $('.previous-page').click();
+        } else
+            $('.next-page').click();
     }
+    if (!$('#collpase1').hasClass('show')) {
+        $('a[aria-controls="collpase1"]').click();
+        setTimeout(function () {
+            $('html, body').animate({
+                scrollTop: $('#heading1').offset().top
+            }, 600);
+        }, 800);
+    } else
+        $('html, body').animate({
+            scrollTop: $('#heading1').offset().top
+        }, 600);
+});
+
+bc.click(function () {
+    while ($('#collpase2').closest('.card').css('display') == 'none') {
+        var aux = parseInt($('.page-item.active').find('.page-link').text().split('(')[0]);
+        if (aux * numProjetos > 2) {
+            if ((aux - 2) * numProjetos + 1 <= 2)
+                $('.previous-page').attr('value', 'true');
+            else
+                $('.previous-page').attr('value', 'false');
+            $('.previous-page').click();
+        } else
+            $('.next-page').click();
+    }
+    if (!$('#collpase2').hasClass('show')){
+        $('a[aria-controls="collpase2"]').click();
+        setTimeout(function () {
+            $('html, body').animate({
+                scrollTop: $('#heading2').offset().top
+            }, 600);
+        }, 800);
+    } else
+        $('html, body').animate({
+            scrollTop: $('#heading2').offset().top
+        }, 600);
+});
+
+bb.click(function () {
+    while ($('#collpase3').closest('.card').css('display') == 'none') {
+        var aux = parseInt($('.page-item.active').find('.page-link').text().split('(')[0]);
+        if (aux * numProjetos > 3) {
+            if ((aux - 2) * numProjetos + 1 <= 3)
+                $('.previous-page').attr('value', 'true');
+            else
+                $('.previous-page').attr('value', 'false');
+            $('.previous-page').click();
+        } else
+            $('.next-page').click();
+    }
+    if (!$('#collpase3').hasClass('show')){
+        $('a[aria-controls="collpase3"]').click();
+        setTimeout(function () {
+            $('html, body').animate({
+                scrollTop: $('#heading3').offset().top
+            }, 600);
+        }, 800);
+    } else
+        $('html, body').animate({
+            scrollTop: $('#heading3').offset().top
+        }, 600);
+});
+
+bv.click(function () {
+    while ($('#collpase4').closest('.card').css('display') == 'none') {
+        var aux = parseInt($('.page-item.active').find('.page-link').text().split('(')[0]);
+        if (aux * numProjetos > 4) {
+            if ((aux - 2) * numProjetos + 1 <= 4)
+                $('.previous-page').attr('value', 'true');
+            else
+                $('.previous-page').attr('value', 'false');
+            $('.previous-page').click();
+        } else
+            $('.next-page').click();
+    }
+    if (!$('#collpase4').hasClass('show')){
+        $('a[aria-controls="collpase4"]').click();
+        setTimeout(function () {
+            $('html, body').animate({
+                scrollTop: $('#heading4').offset().top
+            }, 600);
+        }, 800);
+    } else
+        $('html, body').animate({
+            scrollTop: $('#heading4').offset().top
+        }, 600);
+});
+
+ao.click(function () {
+    while ($('#collpase5').closest('.card').css('display') == 'none') {
+        var aux = parseInt($('.page-item.active').find('.page-link').text().split('(')[0]);
+        if (aux * numProjetos > 5) {
+            if ((aux - 2) * numProjetos + 1 <= 5)
+                $('.previous-page').attr('value', 'true');
+            else
+                $('.previous-page').attr('value', 'false');
+            $('.previous-page').click();
+        } else
+            $('.next-page').click();
+    }
+    if (!$('#collpase5').hasClass('show')){
+        $('a[aria-controls="collpase5"]').click();
+        setTimeout(function () {
+            $('html, body').animate({
+                scrollTop: $('#heading5').offset().top
+            }, 600);
+        }, 800);
+    } else
+        $('html, body').animate({
+            scrollTop: $('#heading5').offset().top
+        }, 600);
+});
+
+me.click(function () {
+    while ($('#collpase6').closest('.card').css('display') == 'none') {
+        var aux = parseInt($('.page-item.active').find('.page-link').text().split('(')[0]);
+        if (aux * numProjetos > 6) {
+            if ((aux - 2) * numProjetos + 1 <= 6)
+                $('.previous-page').attr('value', 'true');
+            else
+                $('.previous-page').attr('value', 'false');
+            $('.previous-page').click();
+        } else
+            $('.next-page').click();
+    }
+    if (!$('#collpase6').hasClass('show')){
+        $('a[aria-controls="collpase6"]').click();
+        setTimeout(function () {
+            $('html, body').animate({
+                scrollTop: $('#heading6').offset().top
+            }, 600);
+        }, 800);
+    } else
+        $('html, body').animate({
+            scrollTop: $('#heading6').offset().top
+        }, 600);
+});
+
+lg.click(function () {
+    while ($('#collpase7').closest('.card').css('display') == 'none') {
+        var aux = parseInt($('.page-item.active').find('.page-link').text().split('(')[0]);
+        if (aux * numProjetos > 7) {
+            if ((aux - 2) * numProjetos + 1 <= 7)
+                $('.previous-page').attr('value', 'true');
+            else
+                $('.previous-page').attr('value', 'false');
+            $('.previous-page').click();
+        } else
+            $('.next-page').click();
+    }
+    if (!$('#collpase7').hasClass('show')){
+        $('a[aria-controls="collpase7"]').click();
+        setTimeout(function () {
+            $('html, body').animate({
+                scrollTop: $('#heading7').offset().top
+            }, 600);
+        }, 800);
+    } else
+        $('html, body').animate({
+            scrollTop: $('#heading7').offset().top
+        }, 600);
+});
+
+fg.click(function () {
+    while ($('#collpase8').closest('.card').css('display') == 'none') {
+        var aux = parseInt($('.page-item.active').find('.page-link').text().split('(')[0]);
+        if (aux * numProjetos > 8) {
+            if ((aux - 2) * numProjetos + 1 <= 8)
+                $('.previous-page').attr('value', 'true');
+            else
+                $('.previous-page').attr('value', 'false');
+            $('.previous-page').click();
+        } else
+            $('.next-page').click();
+    }
+    if (!$('#collpase8').hasClass('show')){
+        $('a[aria-controls="collpase8"]').click();
+        setTimeout(function () {
+            $('html, body').animate({
+                scrollTop: $('#heading8').offset().top
+            }, 600);
+        }, 800);
+    } else
+        $('html, body').animate({
+            scrollTop: $('#heading8').offset().top
+        }, 600);
+});
+
+cl.click(function () {
+    while ($('#collpase9').closest('.card').css('display') == 'none') {
+        var aux = parseInt($('.page-item.active').find('.page-link').text().split('(')[0]);
+        if (aux * numProjetos > 9) {
+            if ((aux - 2) * numProjetos + 1 <= 9)
+                $('.previous-page').attr('value', 'true');
+            else
+                $('.previous-page').attr('value', 'false');
+            $('.previous-page').click();
+        } else
+            $('.next-page').click();
+    }
+    if (!$('#collpase9').hasClass('show')){
+        $('a[aria-controls="collpase9"]').click();
+        setTimeout(function () {
+            $('html, body').animate({
+                scrollTop: $('#heading9').offset().top
+            }, 600);
+        }, 800);
+    } else
+        $('html, body').animate({
+            scrollTop: $('#heading9').offset().top
+        }, 600);
+});
+
+cn.click(function () {
+    while ($('#collpase10').closest('.card').css('display') == 'none') {
+        var aux = parseInt($('.page-item.active').find('.page-link').text().split('(')[0]);
+        if (aux * numProjetos > 10) {
+            if ((aux - 2) * numProjetos + 1 <= 10)
+                $('.previous-page').attr('value', 'true');
+            else
+                $('.previous-page').attr('value', 'false');
+            $('.previous-page').click();
+        } else
+            $('.next-page').click();
+    }
+    if (!$('#collpase10').hasClass('show')){
+        $('a[aria-controls="collpase10"]').click();
+        setTimeout(function () {
+            $('html, body').animate({
+                scrollTop: $('#heading10').offset().top
+            }, 600);
+        }, 800);
+    } else
+        $('html, body').animate({
+            scrollTop: $('#heading10').offset().top
+        }, 600);
+});
+
+ss.click(function () {
+    while ($('#collpase11').closest('.card').css('display') == 'none') {
+        var aux = parseInt($('.page-item.active').find('.page-link').text().split('(')[0]);
+        if (aux * numProjetos > 11) {
+            if ((aux - 2) * numProjetos + 1 <= 11)
+                $('.previous-page').attr('value', 'true');
+            else
+                $('.previous-page').attr('value', 'false');
+            $('.previous-page').click();
+        } else
+            $('.next-page').click();
+    }
+    if (!$('#collpase11').hasClass('show')){
+        $('a[aria-controls="collpase11"]').click();
+        setTimeout(function () {
+            $('html, body').animate({
+                scrollTop: $('#heading11').offset().top
+            }, 600);
+        }, 800);
+    } else
+        $('html, body').animate({
+            scrollTop: $('#heading11').offset().top
+        }, 600);
+});
+
+pg.click(function () {
+    while ($('#collpase12').closest('.card').css('display') == 'none') {
+        var aux = parseInt($('.page-item.active').find('.page-link').text().split('(')[0]);
+        if (aux * numProjetos > 12) {
+            if ((aux - 2) * numProjetos + 1 <= 12)
+                $('.previous-page').attr('value', 'true');
+            else
+                $('.previous-page').attr('value', 'false');
+            $('.previous-page').click();
+        } else
+            $('.next-page').click();
+    }
+    if (!$('#collpase12').hasClass('show')){
+        $('a[aria-controls="collpase12"]').click();
+        setTimeout(function () {
+            $('html, body').animate({
+                scrollTop: $('#heading12').offset().top
+            }, 600);
+        }, 800);
+    } else
+        $('html, body').animate({
+            scrollTop: $('#heading12').offset().top
+        }, 600);
+});
+
+gg.click(function () {
+    while ($('#collpase13').closest('.card').css('display') == 'none') {
+        var aux = parseInt($('.page-item.active').find('.page-link').text().split('(')[0]);
+        if (aux * numProjetos > 13) {
+            if ((aux - 2) * numProjetos + 1 <= 13)
+                $('.previous-page').attr('value', 'true');
+            else
+                $('.previous-page').attr('value', 'false');
+            $('.previous-page').click();
+        } else
+            $('.next-page').click();
+    }
+    if (!$('#collpase13').hasClass('show')){
+        $('a[aria-controls="collpase13"]').click();
+        setTimeout(function () {
+            $('html, body').animate({
+                scrollTop: $('#heading13').offset().top
+            }, 600);
+        }, 800);
+    } else
+        $('html, body').animate({
+            scrollTop: $('#heading13').offset().top
+        }, 600);
+});
+
+gs.click(function () {
+    while ($('#collpase14').closest('.card').css('display') == 'none') {
+        var aux = parseInt($('.page-item.active').find('.page-link').text().split('(')[0]);
+        if (aux * numProjetos > 14) {
+            if ((aux - 2) * numProjetos + 1 <= 14)
+                $('.previous-page').attr('value', 'true');
+            else
+                $('.previous-page').attr('value', 'false');
+            $('.previous-page').click();
+        } else
+            $('.next-page').click();
+    }
+    if (!$('#collpase14').hasClass('show')){
+        $('a[aria-controls="collpase14"]').click();
+        setTimeout(function () {
+            $('html, body').animate({
+                scrollTop: $('#heading14').offset().top
+            }, 600);
+        }, 800);
+    } else
+        $('html, body').animate({
+            scrollTop: $('#heading14').offset().top
+        }, 600);
+});
+
+gm.click(function () {
+    while ($('#collpase15').closest('.card').css('display') == 'none') {
+        var aux = parseInt($('.page-item.active').find('.page-link').text().split('(')[0]);
+        if (aux * numProjetos > 15) {
+            if ((aux - 2) * numProjetos + 1 <= 15)
+                $('.previous-page').attr('value', 'true');
+            else
+                $('.previous-page').attr('value', 'false');
+            $('.previous-page').click();
+        } else
+            $('.next-page').click();
+    }
+    if (!$('#collpase15').hasClass('show')){
+        $('a[aria-controls="collpase15"]').click();
+        setTimeout(function () {
+            $('html, body').animate({
+                scrollTop: $('#heading15').offset().top
+            }, 600);
+        }, 800);
+    } else
+        $('html, body').animate({
+            scrollTop: $('#heading15').offset().top
+        }, 600);
+});
+
+st.click(function () {
+    while ($('#collpase16').closest('.card').css('display') == 'none') {
+        var aux = parseInt($('.page-item.active').find('.page-link').text().split('(')[0]);
+        if (aux * numProjetos > 16) {
+            if ((aux - 2) * numProjetos + 1 <= 16)
+                $('.previous-page').attr('value', 'true');
+            else
+                $('.previous-page').attr('value', 'false');
+            $('.previous-page').click();
+        } else
+            $('.next-page').click();
+    }
+    if (!$('#collpase16').hasClass('show')){
+        $('a[aria-controls="collpase16"]').click();
+        setTimeout(function () {
+            $('html, body').animate({
+                scrollTop: $('#heading16').offset().top
+            }, 600);
+        }, 800);
+    } else
+        $('html, body').animate({
+            scrollTop: $('#heading16').offset().top
+        }, 600);
+});
+
+mc.click(function () {
+    while ($('#collpase17').closest('.card').css('display') == 'none') {
+        var aux = parseInt($('.page-item.active').find('.page-link').text().split('(')[0]);
+        if (aux * numProjetos > 17) {
+            if ((aux - 2) * numProjetos + 1 <= 17)
+                $('.previous-page').attr('value', 'true');
+            else
+                $('.previous-page').attr('value', 'false');
+            $('.previous-page').click();
+        } else
+            $('.next-page').click();
+    }
+    if (!$('#collpase17').hasClass('show')){
+        $('a[aria-controls="collpase17"]').click();
+        setTimeout(function () {
+            $('html, body').animate({
+                scrollTop: $('#heading17').offset().top
+            }, 600);
+        }, 800);
+    } else
+        $('html, body').animate({
+            scrollTop: $('#heading17').offset().top
+        }, 600);
+});
+
+br.click(function () {
+    while ($('#collpase18').closest('.card').css('display') == 'none') {
+        var aux = parseInt($('.page-item.active').find('.page-link').text().split('(')[0]);
+        if (aux * numProjetos > 18) {
+            if ((aux - 2) * numProjetos + 1 <= 18)
+                $('.previous-page').attr('value', 'true');
+            else
+                $('.previous-page').attr('value', 'false');
+            $('.previous-page').click();
+        } else
+            $('.next-page').click();
+    }
+    if (!$('#collpase18').hasClass('show')){
+        $('a[aria-controls="collpase18"]').click();
+        setTimeout(function () {
+            $('html, body').animate({
+                scrollTop: $('#heading18').offset().top
+            }, 600);
+        }, 800);
+    } else
+        $('html, body').animate({
+            scrollTop: $('#heading18').offset().top
+        }, 600);
+});
+
+bt.click(function () {
+    while ($('#collpase19').closest('.card').css('display') == 'none') {
+        var aux = parseInt($('.page-item.active').find('.page-link').text().split('(')[0]);
+        if (aux * numProjetos > 19) {
+            if ((aux - 2) * numProjetos + 1 <= 19)
+                $('.previous-page').attr('value', 'true');
+            else
+                $('.previous-page').attr('value', 'false');
+            $('.previous-page').click();
+        } else
+            $('.next-page').click();
+    }
+    if (!$('#collpase19').hasClass('show')){
+        $('a[aria-controls="collpase19"]').click();
+        setTimeout(function () {
+            $('html, body').animate({
+                scrollTop: $('#heading19').offset().top
+            }, 600);
+        }, 800);
+    } else
+        $('html, body').animate({
+            scrollTop: $('#heading19').offset().top
+        }, 600);
+});
+
+ag.click(function () {
+    while ($('#collpase20').closest('.card').css('display') == 'none') {
+        var aux = parseInt($('.page-item.active').find('.page-link').text().split('(')[0]);
+        if (aux * numProjetos > 20) {
+            if ((aux - 2) * numProjetos + 1 <= 20)
+                $('.previous-page').attr('value', 'true');
+            else
+                $('.previous-page').attr('value', 'false');
+            $('.previous-page').click();
+        } else
+            $('.next-page').click();
+    }
+    if (!$('#collpase20').hasClass('show')){
+        $('a[aria-controls="collpase20"]').click();
+        setTimeout(function () {
+            $('html, body').animate({
+                scrollTop: $('#heading20').offset().top
+            }, 600);
+        }, 800);
+    } else
+        $('html, body').animate({
+            scrollTop: $('#heading20').offset().top
+        }, 600);
+});
+
+ga.click(function () {
+    while ($('#collpase21').closest('.card').css('display') == 'none') {
+        var aux = parseInt($('.page-item.active').find('.page-link').text().split('(')[0]);
+        if (aux * numProjetos > 21) {
+            if ((aux - 2) * numProjetos + 1 <= 21)
+                $('.previous-page').attr('value', 'true');
+            else
+                $('.previous-page').attr('value', 'false');
+            $('.previous-page').click();
+        } else
+            $('.next-page').click();
+    }
+    if (!$('#collpase21').hasClass('show')) {
+        $('a[aria-controls="collpase21"]').click();
+        setTimeout(function () {
+            $('html, body').animate({
+                scrollTop: $('#heading21').offset().top
+            }, 600);
+        }, 800);
+    } else
+        $('html, body').animate({
+            scrollTop: $('#heading21').offset().top
+        }, 600);
+});
