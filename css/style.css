@@ -1019,6 +1019,7 @@ fieldset[disabled] .btn-success:hover {
 
 .card{
   margin-bottom: 1em;
+  background-color: transparent;
 }
 
 .card-block{
@@ -1054,5 +1055,9 @@ fieldset[disabled] .btn-success:hover {
 }
 
 .next-page, .previous-page{
-  padding: 0.2rem 0.75rem;
+  padding: 0.19rem 0.75rem;
+}
+
+.card-header{
+  background-color: #f8f8f8;
 }
