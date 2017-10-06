@@ -4,6 +4,7 @@
     $('.noticias').css('color', '#327964')
     $('.noticias').css('border-bottom-color', '#920f12')
 
+    $('html').css('overflow-y', 'auto');
 
     $.ajaxSetup({
         cache: true

@@ -1,10 +1,10 @@
 (function ($) {
   "use strict"; // Start of use strict
-  
+
   $(window).on('beforeunload', function () {
     $(window).scrollTop(0);
   });
-  
+
   if ($(window).width() > 1024)
     var numProjetos = 11;
   else
@@ -180,7 +180,8 @@
       bar.html(width * 1 + '%');
     }
   }
-  
+
+
   /* ----Slider-----
   if ($(window).width() > 1024) {
     $('.slider').css('height', $(window).height() - $('#mainNav').height() - $('.top-bar').height() - 50);

@@ -6,4 +6,6 @@
 
     if ($(window).width() >= 768)
         $('body').css('margin-bottom', $('footer').height() + "px");
+
+    $('html').css('overflow-y', 'auto');
 })(jQuery); // End of use strict
