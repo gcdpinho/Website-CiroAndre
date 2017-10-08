@@ -1,11 +1,37 @@
 (function ($) {
     "use strict";
+    $(window).on('beforeunload', function () {
+        $(window).scrollTop(0);
+      });
 
     $('.noticias').css('color', '#920f12')
     $('.noticias').css('border-bottom-color', '#920f12')
 
-    $('html').css('overflow-y', 'auto');
+    var screenH = $(window).height();
+    var screenW = $(window).width();
+    $('#loader').css('top', screenH / 2);
+    var value = screenW / 2 - $("#loader").width() / 2;
+    if (value < 0)
+      value *= -1;
+    $('#loader').css('left', value);
+    var bar = $('#progress-bar')
+    var width = bar.width();
+    var id = setInterval(frame, 15);
+  
+    function frame() {
+      if (width >= 100) {
+        clearInterval(id);
+        $('#loader').remove();
+        $('.background-loader').remove();
+        $('html').css('overflow-y', 'auto');
+      } else {
+        width++;
+        bar.width(width + '%');
+        bar.html(width * 1 + '%');
+      }
+    }
 
+    
     $.ajaxSetup({
         cache: true
     });

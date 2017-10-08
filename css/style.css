@@ -356,7 +356,7 @@ section.success {
  
   .top-bar-red {
     background-color: #920f12;
-    height: 52px;
+    height: 47px;
   }
   .top-bar-green {
     background-color: #920f12;
@@ -913,15 +913,17 @@ fieldset[disabled] .btn-success:hover {
 /* HEADER */
 .list-inline-header{
     list-style: none;
+    float: right;
+    margin-right: 1em;
 }
 
 
 .btn-social-header {
   font-size: 20px;
-  line-height: 35px;
+  line-height: 31px;
   display: inline-block;
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   text-align: center;
   border: 2px solid white;
   border-radius: 100%;
@@ -967,6 +969,7 @@ fieldset[disabled] .btn-success:hover {
 .noticia-msg{
   margin: 0 1em;
   margin-bottom: 1em;
+  cursor: default;
 }
 
 .contato-ciro{
@@ -985,21 +988,24 @@ fieldset[disabled] .btn-success:hover {
 .progress-bar{
   background-color: #dfdfdf;
   font-size: 0.7em;
-  height: 8px;
+  height: 5px;
+  border-radius: 10px;
 }
 
 .progress-bar-loading{
   background-color: #920f12;
   color: transparent;
-  height: 8px;
+  height: 5px;
   width: 0%;
+  border-radius: 10px;
 }
 
 #loader{
   position: absolute;
   width: 50%;
-  height: 8px;
+  height: 5px;
   z-index:1000;
+  
 }
 
 .background-loader{
@@ -1109,4 +1115,8 @@ fieldset[disabled] .btn-success:hover {
 
 .seletores-pag{
   margin-left: 2em;
+}
+
+.fale-title{
+  margin-bottom: 1em;
 }
