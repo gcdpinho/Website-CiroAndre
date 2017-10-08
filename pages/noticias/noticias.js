@@ -1,7 +1,7 @@
 (function ($) {
     "use strict";
 
-    $('.noticias').css('color', '#327964')
+    $('.noticias').css('color', '#920f12')
     $('.noticias').css('border-bottom-color', '#920f12')
 
     $('html').css('overflow-y', 'auto');
@@ -31,13 +31,16 @@
                             aux = 1;
                     }
                 }
+                /*
                 $('#loader').remove();
                 $('.pages-noticias').css('display', 'flex');
                 $('.not-mobile').css('min-height', '100px');
+                */
             }
         );
     });
     
     if ($(window).width() >= 768)
         $('body').css('margin-bottom', $('footer').height() + "px");
+
 })(jQuery); // End of use strict
