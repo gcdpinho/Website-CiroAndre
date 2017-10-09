@@ -173,7 +173,7 @@ section.success {
   }
   #midia,
   #contact {
-    border-top: 1px solid #920f12;
+    border-top: 2px solid #920f12;
   }
   .miss {
     margin-top: 2em;
@@ -365,7 +365,7 @@ section.success {
   }
   .below-navbar-red {
     background-color: #920f12;
-    height: 1px;
+    height: 2px;
   }
   .nav-item {
     padding-right: 15px;
