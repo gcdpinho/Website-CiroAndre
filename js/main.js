@@ -164,6 +164,15 @@
   if (value < 0)
     value *= -1;
   $('#loader').css('left', value);
+  $('#loader').LineProgressbar({
+    percentage: 100,
+    duration: 5000,
+    fillBackgroundColor: '#920f12',
+    height: '5px',
+    radius: '10px'
+    
+  });
+  /*
   var bar = $('#progress-bar')
   var width = bar.width();
   var id = setInterval(frame, 15);
@@ -177,10 +186,10 @@
     } else {
       width++;
       bar.width(width + '%');
-      bar.html(width * 1 + '%');
+      //bar.html(width * 1 + '%');
     }
   }
-
+*/
 
   /* ----Slider-----
   if ($(window).width() > 1024) {
@@ -250,18 +259,18 @@
           $('.msg-not2').html(response.data[index]['message']);
           $('.img-not2').html("<img class='img-face' src=' " + response.data[index]['full_picture'] + "'/>");
         }
+
+        $('#loader').remove();
+        $('.background-loader').remove();
+        $('html').css('overflow-y', 'auto');
+
         /* Loader
         $('#loader').remove();
         $('.facebook-area').css('display', 'block');
         $('.not-mobile').css('min-height', '100px');
 
-        /*
-        for (i = 0; i < response.data.length && i<=3; i++) {
-          if (response.data[i]['message'] != undefined)
-            $('.facebook-area').append("<div class='row not'>  <div class='msg-face'> " + response.data[i]['message'] + "</div> \
-          <div class='_3x-2'> <img class='img-face' src=' " + response.data[i]['full_picture'] + "'/>");
-        }
         */
+        
       }
     );
   });

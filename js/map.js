@@ -319,7 +319,7 @@ function clickRed(index) {
     }
 
     setHover(index, "#920f12");
-
+    $('a[aria-controls=collpase' + (index+1) + ']').focus();
     rsrGroups[index].node.style.fill = '#920f12';
 }
 
@@ -333,6 +333,7 @@ for (var i = 1; i <= 21; i++) {
         else {
             setHover(aux.split('collpase')[1] - 1, '#ababab');
             rsrGroups[aux.split('collpase')[1] - 1].node.style.fill = '#ababab';
+            $(this).blur();
         }
     });
 }

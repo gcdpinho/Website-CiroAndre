@@ -2,7 +2,7 @@
     "use strict";
     $(window).on('beforeunload', function () {
         $(window).scrollTop(0);
-      });
+    });
 
     $('.noticias').css('color', '#920f12')
     $('.noticias').css('border-bottom-color', '#920f12')
@@ -12,8 +12,17 @@
     $('#loader').css('top', screenH / 2);
     var value = screenW / 2 - $("#loader").width() / 2;
     if (value < 0)
-      value *= -1;
+        value *= -1;
     $('#loader').css('left', value);
+    $('#loader').LineProgressbar({
+        percentage: 100,
+        duration: 5000,
+        fillBackgroundColor: '#920f12',
+        height: '5px',
+        radius: '10px'
+
+    });
+    /*
     var bar = $('#progress-bar')
     var width = bar.width();
     var id = setInterval(frame, 15);
@@ -30,8 +39,8 @@
         bar.html(width * 1 + '%');
       }
     }
+    */
 
-    
     $.ajaxSetup({
         cache: true
     });
@@ -49,7 +58,7 @@
                 var aux = 1;
                 for (var i = 0; i < response.data.length; i++) {
                     if (response.data[i]['message'] != undefined) {
-                        $('.pages-not'+aux).append("<div class='row not'>  <div class='_3x-2 text-center'> <img class='noticias-img' src=' " + response.data[i]['full_picture'] + "'/> \
+                        $('.pages-not' + aux).append("<div class='row not'>  <div class='_3x-2 text-center'> <img class='noticias-img' src=' " + response.data[i]['full_picture'] + "'/> \
                         <div class='noticia-msg' align='justify'> " + response.data[i]['message'] + "</div>");
                         if (aux == 1)
                             aux = 2;
@@ -57,6 +66,9 @@
                             aux = 1;
                     }
                 }
+                $('#loader').remove();
+                $('.background-loader').remove();
+                $('html').css('overflow-y', 'auto');
                 /*
                 $('#loader').remove();
                 $('.pages-noticias').css('display', 'flex');
@@ -65,8 +77,12 @@
             }
         );
     });
-    
-    if ($(window).width() >= 768)
-        $('body').css('margin-bottom', $('footer').height() + "px");
+
+    if ($(window).width() >= 768) {
+        if ($(window).width() < 1024)
+            $('body').css('margin-bottom', $('footer').height() + 30 + "px");
+        else
+            $('body').css('margin-bottom', $('footer').height() + "px");
+    }
 
 })(jQuery); // End of use strict
