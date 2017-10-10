@@ -16,17 +16,21 @@
     $('.projetos').css('color', '#920f12');
     $('.projetos').css('border-bottom-color', '#920f12');
 
-    $('.list-projetos').css('margin-top', '4em');
-
     $('html').css('overflow-y', 'auto');
 
-    if ($(window).width() >= 768)
-        $('body').css('margin-bottom', $('footer').height() + "px");
-
+    if ($(window).width() >= 768) {
+        if ($(window).width() < 1024)
+            $('body').css('margin-bottom', $('footer').height() + 30 + "px");
+        else
+            $('body').css('margin-bottom', $('footer').height() + "px");
+    }
     if ($(window).width() <= 1024) {
         $('.mapa').html('<div id="mapa-mobile"></div>')
     }
-
+    if ($(window).width() >= 1024)
+        $('.list-projetos').css('margin-top', '4em');
+    else
+        $('.mapa').css('margin-top', '0');
     for (var i = numProjetos + 1; i <= 21; i++) {
         $('#heading' + i).closest('.card').css('display', 'none');
     }

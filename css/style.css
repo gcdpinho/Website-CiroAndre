@@ -285,6 +285,7 @@ section.success {
 #mainNav .navbar-brand {
   font-size: 1.1rem;
   color: white;
+  margin-right: 0;
 }
 
 #mainNav .navbar-brand.active,
@@ -1137,4 +1138,8 @@ fieldset[disabled] .btn-success:hover {
 .about-msg{
   display: flex;
   align-items: center;
+}
+
+.img-footer{
+  width: 50%;
 }
