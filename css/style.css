@@ -1071,6 +1071,7 @@ fieldset[disabled] .btn-success:hover {
 .card {
   margin-bottom: 1em;
   background-color: transparent;
+  border: 1px solid #ababab;
 }
 
 .card-block {
@@ -1080,11 +1081,14 @@ fieldset[disabled] .btn-success:hover {
 .page-link {
   background-color: #f8f8f8 !important;
   color: black;
+  border-color: #ababab;
 }
 
 .page-link:hover {
   color: #920f12;
+  border-color: #ababab;
 }
+
 
 .page-item.active .page-link {
   background-color: #920f12 !important;
@@ -1098,7 +1102,8 @@ fieldset[disabled] .btn-success:hover {
 }
 
 .page-item.disabled .page-link {
-  color: #dfdfdf;
+  color: #ababab;
+  border-color: #ababab;
 }
 
 .icon-page {
@@ -1112,6 +1117,7 @@ fieldset[disabled] .btn-success:hover {
 
 .card-header {
   background-color: #f8f8f8;
+  border: none;
 }
 
 .mapa {

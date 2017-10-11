@@ -328,11 +328,14 @@ for (var i = 1; i <= 21; i++) {
     $('a[aria-controls=collpase' + i + ']').click(function () {
         var aux = $(this).attr('aria-controls');
 
-        if (!$('#' + aux).hasClass('show'))
+        if (!$('#' + aux).hasClass('show')){
             clickRed(aux.split('collpase')[1] - 1);
+            $(this).closest('.card-header').css('border-bottom', '1px solid #ababab');
+        }
         else {
             setHover(aux.split('collpase')[1] - 1, '#ababab');
             rsrGroups[aux.split('collpase')[1] - 1].node.style.fill = '#ababab';
+            $(this).closest('.card-header').css('border-bottom', 'none');
             $(this).blur();
         }
     });
