@@ -348,6 +348,19 @@ section.success {
   }
 }
 
+@media (min-width: 1200px) {
+  #logo-img{
+    width: 130% !important;
+  }
+}
+
+
+@media (max-width: 330px) {
+  #logo-img{
+    width: 90% !important;
+  }
+}
+
 @media (min-width: 992px) {
   section h2 {
     margin-bottom: 2em;
@@ -910,7 +923,7 @@ fieldset[disabled] .btn-success:hover {
 }
 
 #logo-img {
-  width: 70%;
+  width: 100%;
   height: auto;
 }
 
