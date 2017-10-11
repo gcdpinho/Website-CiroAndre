@@ -57,9 +57,6 @@
     });
   });
 
-  if ($(window).width() >= 768)
-    $('body').css('margin-bottom', $('footer').height() + "px");
-
   if ($(window).width() <= 1024) {
     $('.mapa').html('<div id="mapa-mobile"></div>')
   }
@@ -170,7 +167,7 @@
     fillBackgroundColor: '#920f12',
     height: '5px',
     radius: '10px'
-    
+
   });
   /*
   var bar = $('#progress-bar')
@@ -270,7 +267,7 @@
         $('.not-mobile').css('min-height', '100px');
 
         */
-        
+
       }
     );
   });
@@ -309,4 +306,9 @@
   $('#v-more').click(function () {
     location.href = "https://www.youtube.com/channel/UCERR4R9UhCQ2aKMBxS9VLSw";
   });
+
+  if ($(window).width() >= 768) {
+    $('body').css('margin-bottom', $('footer').height() + 30 + "px");
+  }
+
 })(jQuery); // End of use strict

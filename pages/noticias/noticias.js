@@ -79,10 +79,7 @@
     });
 
     if ($(window).width() >= 768) {
-        if ($(window).width() < 1024)
-            $('body').css('margin-bottom', $('footer').height() + 30 + "px");
-        else
-            $('body').css('margin-bottom', $('footer').height() + "px");
+        $('body').css('margin-bottom', $('footer').height() + 30 + "px");
     }
 
 })(jQuery); // End of use strict

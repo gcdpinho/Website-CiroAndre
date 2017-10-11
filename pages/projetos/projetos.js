@@ -18,12 +18,6 @@
 
     $('html').css('overflow-y', 'auto');
 
-    if ($(window).width() >= 768) {
-        if ($(window).width() < 1024)
-            $('body').css('margin-bottom', $('footer').height() + 30 + "px");
-        else
-            $('body').css('margin-bottom', $('footer').height() + "px");
-    }
     if ($(window).width() <= 1024) {
         $('.mapa').html('<div id="mapa-mobile"></div>')
     }
@@ -121,6 +115,11 @@
         var choose = $('.page-link[value=' + index + ']').closest('.page-item');
         choose.addClass('active')
         choose.html('<span class="page-link">' + index + '<span class="sr-only">(current)</span></span>');
+    }
+
+
+    if ($(window).width() >= 768) {
+        $('body').css('margin-bottom', $('footer').height() + 30 + "px");
     }
 
 })(jQuery); // End of use strict
