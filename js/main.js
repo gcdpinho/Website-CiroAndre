@@ -1,10 +1,6 @@
 (function ($) {
   "use strict"; // Start of use strict
 
-  $('#loader').remove();
-  $('.background-loader').remove();
-  $('html').css('overflow-y', 'auto');
-
   $(window).on('beforeunload', function () {
     $(window).scrollTop(0);
   });
