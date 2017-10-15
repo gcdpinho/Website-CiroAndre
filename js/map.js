@@ -328,6 +328,7 @@ for (var i = 1; i <= 21; i++) {
     $('a[aria-controls=collpase' + i + ']').click(function () {
         var aux = $(this).attr('aria-controls');
 
+        $('.collapse.show').closest('.card').find('.card-header').css('border-bottom', 'none');
         if (!$('#' + aux).hasClass('show')){
             clickRed(aux.split('collpase')[1] - 1);
             $(this).closest('.card-header').css('border-bottom', '1px solid #ababab');
