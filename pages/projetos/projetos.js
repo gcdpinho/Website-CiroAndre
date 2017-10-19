@@ -31,9 +31,9 @@
 
     var numPages = Math.ceil(21 / numProjetos);
     for (var i = 0; i < numPages; i++) {
-        $('.pagination').append('<li class="page-item page"><a class="page-link" value=' + (i + 1) + ' href="#">' + (i + 1) + '</a></li>');
+        $('.pagination').append('<li class="page-item page"><a class="page-link" value=' + (i + 1) + '>' + (i + 1) + '</a></li>');
     }
-    $('.pagination').append('<li class="page-item"><a class="page-link next-page" href="#" aria-label="Next"><span class="icon-page" aria-hidden="true">&raquo;</span><span class="sr-only">Next</span></a></li>');
+    $('.pagination').append('<li class="page-item"><a class="page-link next-page" aria-label="Next"><span class="icon-page" aria-hidden="true">&raquo;</span><span class="sr-only">Next</span></a></li>');
     editPageActive(1);
 
     $('.next-page').click(function () {
@@ -45,10 +45,10 @@
         }
         flagAnimation = $('.previous-page').attr('value');
         if (flagAnimation == "true") {
-            $('#accordion').toggle("slide");
+            $('#accordion').addClass('animated fadeInLeft');
             setTimeout(function () {
-                $('#accordion').toggle("slide");
-            }, 50);
+                $('#accordion').removeClass('animated fadeInLeft');
+            }, 900);
 
         }
         if (next == numPages)
@@ -70,10 +70,10 @@
         }
         flagAnimation = $('.previous-page').attr('value');
         if (flagAnimation == "true") {
-            $('#accordion').toggle("slide");
+            $('#accordion').addClass('animated fadeInRight');
             setTimeout(function () {
-                $('#accordion').toggle("slide");
-            }, 50);
+                $('#accordion').removeClass('animated fadeInRight');
+            }, 900);
 
         }
         if (previous == 1)

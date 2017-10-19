@@ -360,15 +360,16 @@ ba.click(function () {
         //printGray();
 
         $('a[aria-controls="collpase1"]').click();
-        setTimeout(function () {
-            $('html, body').animate({
-                scrollTop: $('#heading1').offset().top
-            }, 600);
-        }, 800);
-    } else
-        $('html, body').animate({
-            scrollTop: $('#heading1').offset().top
-        }, 600);
+    //     setTimeout(function () {
+    //         $('html, body').animate({
+    //             scrollTop: $('#heading1').offset().top
+    //         }, 600);
+    //     }, 800);
+    // } else
+    //     $('html, body').animate({
+    //         scrollTop: $('#heading1').offset().top
+    //     }, 600);
+    }
 });
 
 bc.click(function () {
@@ -386,15 +387,16 @@ bc.click(function () {
     }
     if (!$('#collpase2').hasClass('show')) {
         $('a[aria-controls="collpase2"]').click();
-        setTimeout(function () {
-            $('html, body').animate({
-                scrollTop: $('#heading2').offset().top
-            }, 600);
-        }, 800);
-    } else
-        $('html, body').animate({
-            scrollTop: $('#heading2').offset().top
-        }, 600);
+    //     setTimeout(function () {
+    //         $('html, body').animate({
+    //             scrollTop: $('#heading2').offset().top
+    //         }, 600);
+    //     }, 800);
+    // } else
+    //     $('html, body').animate({
+    //         scrollTop: $('#heading2').offset().top
+    //     }, 600);
+    }
 });
 
 bb.click(function () {
@@ -412,15 +414,16 @@ bb.click(function () {
     }
     if (!$('#collpase3').hasClass('show')) {
         $('a[aria-controls="collpase3"]').click();
-        setTimeout(function () {
-            $('html, body').animate({
-                scrollTop: $('#heading3').offset().top
-            }, 600);
-        }, 800);
-    } else
-        $('html, body').animate({
-            scrollTop: $('#heading3').offset().top
-        }, 600);
+    //     setTimeout(function () {
+    //         $('html, body').animate({
+    //             scrollTop: $('#heading3').offset().top
+    //         }, 600);
+    //     }, 800);
+    // } else
+    //     $('html, body').animate({
+    //         scrollTop: $('#heading3').offset().top
+    //     }, 600);
+    }
 });
 
 bv.click(function () {
@@ -438,15 +441,16 @@ bv.click(function () {
     }
     if (!$('#collpase4').hasClass('show')) {
         $('a[aria-controls="collpase4"]').click();
-        setTimeout(function () {
-            $('html, body').animate({
-                scrollTop: $('#heading4').offset().top
-            }, 600);
-        }, 800);
-    } else
-        $('html, body').animate({
-            scrollTop: $('#heading4').offset().top
-        }, 600);
+    //     setTimeout(function () {
+    //         $('html, body').animate({
+    //             scrollTop: $('#heading4').offset().top
+    //         }, 600);
+    //     }, 800);
+    // } else
+    //     $('html, body').animate({
+    //         scrollTop: $('#heading4').offset().top
+    //     }, 600);
+    }
 });
 
 ao.click(function () {
@@ -464,15 +468,16 @@ ao.click(function () {
     }
     if (!$('#collpase5').hasClass('show')) {
         $('a[aria-controls="collpase5"]').click();
-        setTimeout(function () {
-            $('html, body').animate({
-                scrollTop: $('#heading5').offset().top
-            }, 600);
-        }, 800);
-    } else
-        $('html, body').animate({
-            scrollTop: $('#heading5').offset().top
-        }, 600);
+    //     setTimeout(function () {
+    //         $('html, body').animate({
+    //             scrollTop: $('#heading5').offset().top
+    //         }, 600);
+    //     }, 800);
+    // } else
+    //     $('html, body').animate({
+    //         scrollTop: $('#heading5').offset().top
+    //     }, 600);
+    }
 });
 
 me.click(function () {
@@ -490,15 +495,16 @@ me.click(function () {
     }
     if (!$('#collpase6').hasClass('show')) {
         $('a[aria-controls="collpase6"]').click();
-        setTimeout(function () {
-            $('html, body').animate({
-                scrollTop: $('#heading6').offset().top
-            }, 600);
-        }, 800);
-    } else
-        $('html, body').animate({
-            scrollTop: $('#heading6').offset().top
-        }, 600);
+    //     setTimeout(function () {
+    //         $('html, body').animate({
+    //             scrollTop: $('#heading6').offset().top
+    //         }, 600);
+    //     }, 800);
+    // } else
+    //     $('html, body').animate({
+    //         scrollTop: $('#heading6').offset().top
+    //     }, 600);
+    }
 });
 
 lg.click(function () {
@@ -516,15 +522,16 @@ lg.click(function () {
     }
     if (!$('#collpase7').hasClass('show')) {
         $('a[aria-controls="collpase7"]').click();
-        setTimeout(function () {
-            $('html, body').animate({
-                scrollTop: $('#heading7').offset().top
-            }, 600);
-        }, 800);
-    } else
-        $('html, body').animate({
-            scrollTop: $('#heading7').offset().top
-        }, 600);
+    //     setTimeout(function () {
+    //         $('html, body').animate({
+    //             scrollTop: $('#heading7').offset().top
+    //         }, 600);
+    //     }, 800);
+    // } else
+    //     $('html, body').animate({
+    //         scrollTop: $('#heading7').offset().top
+    //     }, 600);
+    }
 });
 
 fg.click(function () {
@@ -542,15 +549,16 @@ fg.click(function () {
     }
     if (!$('#collpase8').hasClass('show')) {
         $('a[aria-controls="collpase8"]').click();
-        setTimeout(function () {
-            $('html, body').animate({
-                scrollTop: $('#heading8').offset().top
-            }, 600);
-        }, 800);
-    } else
-        $('html, body').animate({
-            scrollTop: $('#heading8').offset().top
-        }, 600);
+    //     setTimeout(function () {
+    //         $('html, body').animate({
+    //             scrollTop: $('#heading8').offset().top
+    //         }, 600);
+    //     }, 800);
+    // } else
+    //     $('html, body').animate({
+    //         scrollTop: $('#heading8').offset().top
+    //     }, 600);
+    }
 });
 
 cl.click(function () {
@@ -568,15 +576,16 @@ cl.click(function () {
     }
     if (!$('#collpase9').hasClass('show')) {
         $('a[aria-controls="collpase9"]').click();
-        setTimeout(function () {
-            $('html, body').animate({
-                scrollTop: $('#heading9').offset().top
-            }, 600);
-        }, 800);
-    } else
-        $('html, body').animate({
-            scrollTop: $('#heading9').offset().top
-        }, 600);
+    //     setTimeout(function () {
+    //         $('html, body').animate({
+    //             scrollTop: $('#heading9').offset().top
+    //         }, 600);
+    //     }, 800);
+    // } else
+    //     $('html, body').animate({
+    //         scrollTop: $('#heading9').offset().top
+    //     }, 600);
+    }
 });
 
 cn.click(function () {
@@ -594,15 +603,16 @@ cn.click(function () {
     }
     if (!$('#collpase10').hasClass('show')) {
         $('a[aria-controls="collpase10"]').click();
-        setTimeout(function () {
-            $('html, body').animate({
-                scrollTop: $('#heading10').offset().top
-            }, 600);
-        }, 800);
-    } else
-        $('html, body').animate({
-            scrollTop: $('#heading10').offset().top
-        }, 600);
+    //     setTimeout(function () {
+    //         $('html, body').animate({
+    //             scrollTop: $('#heading10').offset().top
+    //         }, 600);
+    //     }, 800);
+    // } else
+    //     $('html, body').animate({
+    //         scrollTop: $('#heading10').offset().top
+    //     }, 600);
+    }
 });
 
 ss.click(function () {
@@ -620,15 +630,16 @@ ss.click(function () {
     }
     if (!$('#collpase11').hasClass('show')) {
         $('a[aria-controls="collpase11"]').click();
-        setTimeout(function () {
-            $('html, body').animate({
-                scrollTop: $('#heading11').offset().top
-            }, 600);
-        }, 800);
-    } else
-        $('html, body').animate({
-            scrollTop: $('#heading11').offset().top
-        }, 600);
+    //     setTimeout(function () {
+    //         $('html, body').animate({
+    //             scrollTop: $('#heading11').offset().top
+    //         }, 600);
+    //     }, 800);
+    // } else
+    //     $('html, body').animate({
+    //         scrollTop: $('#heading11').offset().top
+    //     }, 600);
+    }
 });
 
 pg.click(function () {
@@ -646,15 +657,16 @@ pg.click(function () {
     }
     if (!$('#collpase12').hasClass('show')) {
         $('a[aria-controls="collpase12"]').click();
-        setTimeout(function () {
-            $('html, body').animate({
-                scrollTop: $('#heading12').offset().top
-            }, 600);
-        }, 800);
-    } else
-        $('html, body').animate({
-            scrollTop: $('#heading12').offset().top
-        }, 600);
+    //     setTimeout(function () {
+    //         $('html, body').animate({
+    //             scrollTop: $('#heading12').offset().top
+    //         }, 600);
+    //     }, 800);
+    // } else
+    //     $('html, body').animate({
+    //         scrollTop: $('#heading12').offset().top
+    //     }, 600);
+    }
 });
 
 gg.click(function () {
@@ -672,15 +684,16 @@ gg.click(function () {
     }
     if (!$('#collpase13').hasClass('show')) {
         $('a[aria-controls="collpase13"]').click();
-        setTimeout(function () {
-            $('html, body').animate({
-                scrollTop: $('#heading13').offset().top
-            }, 600);
-        }, 800);
-    } else
-        $('html, body').animate({
-            scrollTop: $('#heading13').offset().top
-        }, 600);
+    //     setTimeout(function () {
+    //         $('html, body').animate({
+    //             scrollTop: $('#heading13').offset().top
+    //         }, 600);
+    //     }, 800);
+    // } else
+    //     $('html, body').animate({
+    //         scrollTop: $('#heading13').offset().top
+    //     }, 600);
+    }
 });
 
 gs.click(function () {
@@ -698,15 +711,16 @@ gs.click(function () {
     }
     if (!$('#collpase14').hasClass('show')) {
         $('a[aria-controls="collpase14"]').click();
-        setTimeout(function () {
-            $('html, body').animate({
-                scrollTop: $('#heading14').offset().top
-            }, 600);
-        }, 800);
-    } else
-        $('html, body').animate({
-            scrollTop: $('#heading14').offset().top
-        }, 600);
+    //     setTimeout(function () {
+    //         $('html, body').animate({
+    //             scrollTop: $('#heading14').offset().top
+    //         }, 600);
+    //     }, 800);
+    // } else
+    //     $('html, body').animate({
+    //         scrollTop: $('#heading14').offset().top
+    //     }, 600);
+    }
 });
 
 gm.click(function () {
@@ -724,15 +738,16 @@ gm.click(function () {
     }
     if (!$('#collpase15').hasClass('show')) {
         $('a[aria-controls="collpase15"]').click();
-        setTimeout(function () {
-            $('html, body').animate({
-                scrollTop: $('#heading15').offset().top
-            }, 600);
-        }, 800);
-    } else
-        $('html, body').animate({
-            scrollTop: $('#heading15').offset().top
-        }, 600);
+    //     setTimeout(function () {
+    //         $('html, body').animate({
+    //             scrollTop: $('#heading15').offset().top
+    //         }, 600);
+    //     }, 800);
+    // } else
+    //     $('html, body').animate({
+    //         scrollTop: $('#heading15').offset().top
+    //     }, 600);
+    }
 });
 
 st.click(function () {
@@ -750,15 +765,16 @@ st.click(function () {
     }
     if (!$('#collpase16').hasClass('show')) {
         $('a[aria-controls="collpase16"]').click();
-        setTimeout(function () {
-            $('html, body').animate({
-                scrollTop: $('#heading16').offset().top
-            }, 600);
-        }, 800);
-    } else
-        $('html, body').animate({
-            scrollTop: $('#heading16').offset().top
-        }, 600);
+    //     setTimeout(function () {
+    //         $('html, body').animate({
+    //             scrollTop: $('#heading16').offset().top
+    //         }, 600);
+    //     }, 800);
+    // } else
+    //     $('html, body').animate({
+    //         scrollTop: $('#heading16').offset().top
+    //     }, 600);
+    }
 });
 
 mc.click(function () {
@@ -776,15 +792,16 @@ mc.click(function () {
     }
     if (!$('#collpase17').hasClass('show')) {
         $('a[aria-controls="collpase17"]').click();
-        setTimeout(function () {
-            $('html, body').animate({
-                scrollTop: $('#heading17').offset().top
-            }, 600);
-        }, 800);
-    } else
-        $('html, body').animate({
-            scrollTop: $('#heading17').offset().top
-        }, 600);
+    //     setTimeout(function () {
+    //         $('html, body').animate({
+    //             scrollTop: $('#heading17').offset().top
+    //         }, 600);
+    //     }, 800);
+    // } else
+    //     $('html, body').animate({
+    //         scrollTop: $('#heading17').offset().top
+    //     }, 600);
+    }
 });
 
 br.click(function () {
@@ -802,15 +819,16 @@ br.click(function () {
     }
     if (!$('#collpase18').hasClass('show')) {
         $('a[aria-controls="collpase18"]').click();
-        setTimeout(function () {
-            $('html, body').animate({
-                scrollTop: $('#heading18').offset().top
-            }, 600);
-        }, 800);
-    } else
-        $('html, body').animate({
-            scrollTop: $('#heading18').offset().top
-        }, 600);
+    //     setTimeout(function () {
+    //         $('html, body').animate({
+    //             scrollTop: $('#heading18').offset().top
+    //         }, 600);
+    //     }, 800);
+    // } else
+    //     $('html, body').animate({
+    //         scrollTop: $('#heading18').offset().top
+    //     }, 600);
+    }
 });
 
 bt.click(function () {
@@ -828,15 +846,16 @@ bt.click(function () {
     }
     if (!$('#collpase19').hasClass('show')) {
         $('a[aria-controls="collpase19"]').click();
-        setTimeout(function () {
-            $('html, body').animate({
-                scrollTop: $('#heading19').offset().top
-            }, 600);
-        }, 800);
-    } else
-        $('html, body').animate({
-            scrollTop: $('#heading19').offset().top
-        }, 600);
+    //     setTimeout(function () {
+    //         $('html, body').animate({
+    //             scrollTop: $('#heading19').offset().top
+    //         }, 600);
+    //     }, 800);
+    // } else
+    //     $('html, body').animate({
+    //         scrollTop: $('#heading19').offset().top
+    //     }, 600);
+    }
 });
 
 ag.click(function () {
@@ -854,15 +873,16 @@ ag.click(function () {
     }
     if (!$('#collpase20').hasClass('show')) {
         $('a[aria-controls="collpase20"]').click();
-        setTimeout(function () {
-            $('html, body').animate({
-                scrollTop: $('#heading20').offset().top
-            }, 600);
-        }, 800);
-    } else
-        $('html, body').animate({
-            scrollTop: $('#heading20').offset().top
-        }, 600);
+    //     setTimeout(function () {
+    //         $('html, body').animate({
+    //             scrollTop: $('#heading20').offset().top
+    //         }, 600);
+    //     }, 800);
+    // } else
+    //     $('html, body').animate({
+    //         scrollTop: $('#heading20').offset().top
+    //     }, 600);
+    }
 });
 
 ga.click(function () {
@@ -880,13 +900,14 @@ ga.click(function () {
     }
     if (!$('#collpase21').hasClass('show')) {
         $('a[aria-controls="collpase21"]').click();
-        setTimeout(function () {
-            $('html, body').animate({
-                scrollTop: $('#heading21').offset().top
-            }, 600);
-        }, 800);
-    } else
-        $('html, body').animate({
-            scrollTop: $('#heading21').offset().top
-        }, 600);
+    //     setTimeout(function () {
+    //         $('html, body').animate({
+    //             scrollTop: $('#heading21').offset().top
+    //         }, 600);
+    //     }, 800);
+    // } else
+    //     $('html, body').animate({
+    //         scrollTop: $('#heading21').offset().top
+    //     }, 600);
+    }
 });

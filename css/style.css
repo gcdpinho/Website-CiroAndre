@@ -1114,6 +1114,14 @@ fieldset[disabled] .btn-success:hover {
   margin-top: 2em;
 }
 
+.page-item{
+  cursor: pointer;
+}
+
+.page-item.disabled{
+  cursor: default;
+}
+
 .page-item.disabled .page-link {
   color: #ababab;
   border-color: #ababab;
