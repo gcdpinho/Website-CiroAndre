@@ -675,6 +675,10 @@ footer .footer-below {
   background: transparent;
 }
 
+.btn-success.focus, .btn-success:focus{
+  box-shadow: none;
+}
+
 .btn-outline.active,
 .btn-outline:active,
 .btn-outline:focus,
