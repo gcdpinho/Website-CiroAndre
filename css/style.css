@@ -1174,3 +1174,13 @@ fieldset[disabled] .btn-success:hover {
 .img-footer{
   width: 50%;
 }
+
+.hashTag{
+  font-size: 14px;
+  color: #1981c3;
+}
+
+.hashTag:hover, .hashTag:active, .hashTag:focus, .hashTag:visited{
+  text-decoration: underline;
+  color: #1981c3;
+}

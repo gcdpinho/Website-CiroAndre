@@ -242,18 +242,21 @@
         var index = 0;
         while (response.data[index]['message'] == undefined)
           index++;
-        $('.msg-princ').html(response.data[index]['message']);
+
+        $('.msg-princ').html(hashTag(response.data[index]['message']));
         $('.img-princ').html("<img class='img-face' src=' " + response.data[index]['full_picture'] + "'/>");
         if ($(window).width() > 768) {
           index++;
           while (response.data[index]['message'] == undefined)
             index++;
-          $('.msg-not1').html(response.data[index]['message']);
+            
+          $('.msg-not1').html(hashTag(response.data[index]['message']));
           $('.img-not1').html("<img class='img-face' src=' " + response.data[index]['full_picture'] + "'/>");
           index++;
           while (response.data[index]['message'] == undefined)
             index++;
-          $('.msg-not2').html(response.data[index]['message']);
+
+          $('.msg-not2').html(hashTag(response.data[index]['message']));
           $('.img-not2').html("<img class='img-face' src=' " + response.data[index]['full_picture'] + "'/>");
         }
 
@@ -309,6 +312,32 @@
 
   if ($(window).width() >= 768) {
     $('body').css('margin-bottom', $('footer').height() + 30 + "px");
+  }
+
+  function hashTag(text) {
+    var flag = true;
+    var split = text.split(" ");
+    var newText = "";
+    for (var i = 0; i < split.length; i++) {
+      var newSplit = split[i].split("\n");
+      for (var j = 0; j < newSplit.length; j++) {
+        var index = newSplit[j].indexOf("#");
+        if (index >= 0) {
+          newText += newSplit[j].substring(0, index);
+          if (!flag)
+            newText += "<br>";
+          newText += "<a class='hashTag' href='https://twitter.com/hashtag/" + newSplit[j].substring(index + 1, newSplit[j].length) + "?src=hash' target='_blank'>";
+          newText += newSplit[j].substring(index, newSplit[j].length);
+          newText += "</a><br>";
+          flag = true;
+        } else if (newSplit[j] != "") {
+          newText += newSplit[j] + " ";
+          flag = false;
+        }
+      }
+    }
+
+    return newText;
   }
 
 })(jQuery); // End of use strict

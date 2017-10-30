@@ -59,7 +59,7 @@
                 for (var i = 0; i < response.data.length; i++) {
                     if (response.data[i]['message'] != undefined) {
                         $('.pages-not' + aux).append("<div class='row not'>  <div class='_3x-2 text-center'> <img class='noticias-img' src=' " + response.data[i]['full_picture'] + "'/> \
-                        <div class='noticia-msg' align='justify'> " + response.data[i]['message'] + "</div>");
+                        <div class='noticia-msg' align='justify'> " + hashTag(response.data[i]['message']) + "</div>");
                         if (aux == 1)
                             aux = 2;
                         else
@@ -81,5 +81,31 @@
     if ($(window).width() >= 768) {
         $('body').css('margin-bottom', $('footer').height() + 30 + "px");
     }
+
+    function hashTag(text) {
+        var flag = true;
+        var split = text.split(" ");
+        var newText = "";
+        for (var i = 0; i < split.length; i++) {
+          var newSplit = split[i].split("\n");
+          for (var j = 0; j < newSplit.length; j++) {
+            var index = newSplit[j].indexOf("#");
+            if (index >= 0) {
+              newText += newSplit[j].substring(0, index);
+              if (!flag)
+                newText += "<br>";
+              newText += "<a class='hashTag' href='https://twitter.com/hashtag/" + newSplit[j].substring(index + 1, newSplit[j].length) + "?src=hash' target='_blank'>";
+              newText += newSplit[j].substring(index, newSplit[j].length);
+              newText += "</a><br>";
+              flag = true;
+            } else if (newSplit[j] != "") {
+              newText += newSplit[j] + " ";
+              flag = false;
+            }
+          }
+        }
+    
+        return newText;
+      }
 
 })(jQuery); // End of use strict
