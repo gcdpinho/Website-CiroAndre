@@ -44,7 +44,7 @@ $(function() {
         error: function() {
           // Fail message
           $('#success').html("<div class='alert alert-danger'>");
-          $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
+          $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true' style='cursor:pointer'>&times;")
             .append("</button>");
           $('#success > .alert-danger').append($("<strong>").text("Desculpe " + firstName + ", meu servidor de email não está respondendo. Tente novamente mais tarde."));
           $('#success > .alert-danger').append('</div>');
