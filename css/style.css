@@ -1184,3 +1184,23 @@ fieldset[disabled] .btn-success:hover {
   text-decoration: underline;
   color: #1981c3;
 }
+
+.footer-below p {
+  margin: 0;
+  display: inline;
+  font-size: 17px;
+}
+
+.vulpis{
+  color: white;
+}
+
+a.vulpis:hover {
+  font-weight: bold;
+  color: white !important;
+}
+
+a.vulpis:focus {
+  font-weight: bold;
+  color: white !important;
+}
